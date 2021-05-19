@@ -1,0 +1,59 @@
+@charset "UTF-8";
+body{
+    margin: 0;
+    padding: 0;
+    overflow:scroll;
+    height: 100vh;
+}
+header {
+    box-sizing: border-box;
+    background: rgb(226, 128, 145);
+    height: 50px;
+  }
+
+main {
+    box-sizing: border-box;
+    position:fixed;
+    width: 100%;
+    height: 100%;
+    background-color:rgb(255, 233, 237);
+    margin-left: 220px;
+    padding: 20px 40px;
+
+        overflow:scroll;
+    height: 100vh;
+  }
+#Midashi{
+  box-sizing: border-box;
+  width:85%;
+  background:rgb(226, 128, 145);
+  color: white;
+
+}
+
+h2{
+  padding: 15px;
+}
+p{
+  margin:10px;
+}
+
+#SamllMain{
+  box-sizing: border-box;
+  background-color:rgb(243, 172, 184);
+  position:fixed;
+  width:75%;
+  color:white;
+}
+
+
+#RSide_menu{
+    box-sizing :border-box;
+    top:100px;
+    height:100%;
+    width: 220px;
+    position: fixed;
+    background:rgb(226, 128, 145);
+    color: White;
+    padding : 20px;
+}
