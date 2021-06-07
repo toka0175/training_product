@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <title>Multiselect | Klorofil Pro - Bootstrap 4 Admin Dashboard Template</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+
+  <!-- Multiselect css -->
+  <link href="assets/plugins/bootstrap-multiselect/bootstrap-multiselect.css" rel="stylesheet" type="text/css" />
+
+  <!-- App css -->
+  <link href="assets/css/bootstrap-custom.min.css" rel="stylesheet" type="text/css" />
+  <link href="assets/css/app.min.css" rel="stylesheet" type="text/css" />
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet">
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="assets/images/favicon.png">
+</head>
+<body>
+  <!-- WRAPPER -->
+  <div id="wrapper">
+
+    @@include('./partials/topbar.html')
+
+    @@include('./partials/left-sidebar.html', {"parentMenu": "forms", "activeMenu": "multiselect"})
+
+    <!-- MAIN -->
+    <div class="main">
+
+      <!-- MAIN CONTENT -->
+      <div class="main-content">
+
+        @@include('./partials/content-heading.html', {"title": "Multiselect", "subtitle": "Intuitive user interface for using select inputs with the multiple attribute present."})
+
+        <div class="container-fluid">
+          <div class="card">
+            <div class="card-header">Multiselect</div>
+            <div class="card-body">
+              <form>
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label>Default</label>
+                      <select id="multiselect1" name="multiselect1[]" class="multiselect form-control" multiple="multiple">
+                        <option value="cheese">Cheese</option>
+                        <option value="tomatoes">Tomatoes</option>
+                        <option value="mozarella">Mozzarella</option>
+                        <option value="mushrooms">Mushrooms</option>
+                        <option value="pepperoni">Pepperoni</option>
+                        <option value="onions">Onions</option>
+                      </select><br><br>
+
+                      <label>"Select All" Option Enabled</label><br>
+                      <select id="multiselect3-all" name="multiselect3[]" class="multiselect multiselect-custom" multiple="multiple">
+                        <option value="multiselect-all">Select All</option>
+                        <option value="cheese">Cheese</option>
+                        <option value="tomatoes">Tomatoes</option>
+                        <option value="mozarella">Mozzarella</option>
+                        <option value="mushrooms">Mushrooms</option>
+                        <option value="pepperoni">Pepperoni</option>
+                        <option value="onions">Onions</option>
+                      </select><br><br>
+
+                      <label>Options Group</label><br>
+                      <select id="multiselect5" name="multiselect5" class="multiselect multiselect-custom" multiple="multiple">
+                        <optgroup label="Mathematics">
+                          <option value="analysis">Analysis</option>
+                          <option value="algebra">Linear Algebra</option>
+                          <option value="discrete">Discrete Mathematics</option>
+                          <option value="numerical">Numerical Analysis</option>
+                          <option value="probability">Probability Theory</option>
+                        </optgroup>
+                        <optgroup label="Computer Science">
+                          <option value="programming">Introduction to Programming</option>
+                          <option value="automata">Automata Theory</option>
+                          <option value="complexity">Complexity Theory</option>
+                          <option value="software">Software Engineering</option>
+                        </optgroup>
+                      </select><br><br>
+
+                      <label>Smaller Size</label><br>
+                      <select id="multiselect-size" name="multiselect7[]" class="multiselect multiselect-custom" multiple="multiple">
+                        <option value="cheese">Cheese</option>
+                        <option value="tomatoes">Tomatoes</option>
+                        <option value="mozarella">Mozzarella</option>
+                      </select><br><br>
+
+                      <label>Button Color Variant (btn-primary)</label><br>
+                      <select id="multiselect-color" name="multiselect9[]" class="multiselect multiselect-custom" multiple="multiple">
+                        <option value="cheese">Cheese</option>
+                        <option value="tomatoes">Tomatoes</option>
+                        <option value="mozarella">Mozzarella</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <label>Custom Checkbox</label><br>
+                    <select id="multiselect2" name="multiselect2[]" class="multiselect multiselect-custom" multiple="multiple">
+                      <option value="cheese">Cheese</option>
+                      <option value="tomatoes">Tomatoes</option>
+                      <option value="mozarella">Mozzarella</option>
+                      <option value="mushrooms">Mushrooms</option>
+                      <option value="pepperoni">Pepperoni</option>
+                      <option value="onions">Onions</option>
+                    </select><br><br>
+
+                    <label>Single Selection (Custom Radio)</label><br>
+                    <select id="single-selection" name="single_selection" class="multiselect multiselect-custom">
+                      <option value="cheese">Cheese</option>
+                      <option value="tomatoes">Tomatoes</option>
+                      <option value="mozarella">Mozzarella</option>
+                      <option value="mushrooms">Mushrooms</option>
+                      <option value="pepperoni">Pepperoni</option>
+                      <option value="onions">Onions</option>
+                    </select><br><br>
+
+                    <label>Filter Enabled</label><br>
+                    <select id="multiselect4-filter" name="multiselect4[]" class="multiselect multiselect-custom" multiple="multiple">
+                      <option value="bootstrap">Bootstrap</option>
+                      <option value="bootstrap-marketplace">Bootstrap Marketplace</option>
+                      <option value="bootstrap-theme">Bootstrap Theme</option>
+                      <option value="html">HTML</option>
+                      <option value="html-template">HTML Template</option>
+                      <option value="wp-marketplace">WordPress Marketplace</option>
+                      <option value="wp-plugin">WordPress Plugin</option>
+                      <option value="wp-theme">WordPress Theme</option>
+                    </select><br><br>
+
+                    <label>Disabled Options</label><br>
+                    <select id="multiselect6" name="multiselect6[]" class="multiselect multiselect-custom" multiple="multiple">
+                      <option value="cheese">Cheese</option>
+                      <option value="tomatoes">Tomatoes</option>
+                      <option value="mozarella">Mozzarella</option>
+                      <option value="mushrooms" disabled="disabled">Mushrooms</option>
+                      <option value="pepperoni" disabled="disabled">Pepperoni</option>
+                      <option value="onions" disabled="disabled">Onions</option>
+                    </select><br><br>
+
+                    <label>Link (btn-link)</label><br>
+                    <select id="multiselect-link" name="multiselect8[]" class="multiselect multiselect-custom" multiple="multiple">
+                      <option value="cheese">Cheese</option>
+                      <option value="tomatoes">Tomatoes</option>
+                      <option value="mozarella">Mozzarella</option>
+                    </select><br><br>
+
+                    <label>Button Color Variant (btn-success)</label><br>
+                    <select id="multiselect-color2" name="multiselect10[]" class="multiselect multiselect-custom" multiple="multiple">
+                      <option value="cheese">Cheese</option>
+                      <option value="tomatoes">Tomatoes</option>
+                      <option value="mozarella">Mozzarella</option>
+                    </select>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- END MAIN CONTENT -->
+
+      @@include('./partials/right-sidebar.html')
+
+    </div>
+    <!-- END MAIN -->
+
+    <div class="clearfix"></div>
+    
+    @@include('./partials/footer.html')
+
+  </div>
+  <!-- END WRAPPER -->
+
+  <!-- Vendor -->
+  <script src="assets/js/vendor.min.js"></script>
+
+  <!-- Multiselect Plugin -->
+  <script src="assets/plugins/bootstrap-multiselect/bootstrap-multiselect.min.js"></script>
+
+  <!-- Multiselect Init -->
+  <script src="assets/js/pages/forms-multiselect.init.min.js"></script>
+
+  <!-- App -->
+  <script src="assets/js/app.min.js"></script>
+</body>
+</html>

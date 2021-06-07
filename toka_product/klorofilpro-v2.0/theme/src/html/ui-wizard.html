@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <title>Wizard | Klorofil Pro - Bootstrap 4 Admin Dashboard Template</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+  <!-- App css -->
+  <link href="assets/css/bootstrap-custom.min.css" rel="stylesheet" type="text/css" />
+  <link href="assets/css/app.min.css" rel="stylesheet" type="text/css" />
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet">
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="assets/images/favicon.png">
+</head>
+<body>
+  <!-- WRAPPER -->
+  <div id="wrapper">
+
+    @@include('./partials/topbar.html')
+
+    @@include('./partials/left-sidebar.html', {"parentMenu": "ui-elements", "activeMenu": "wizard"})
+
+    <!-- MAIN -->
+    <div class="main">
+
+      <!-- MAIN CONTENT -->
+      <div class="main-content">
+
+        @@include('./partials/content-heading.html', {"title": "Wizard", "subtitle": "A wizard divides a complex goal into multiple steps by separating sub-tasks or content into panes."})
+
+        <div class="container-fluid">
+          <div id="demo-wizard" class="wizard">
+            <!-- steps container -->
+            <div class="steps-container">
+              <ul class="steps">
+                <li data-step="1" class="active"><span class="badge badge-info">1</span>Account Type<span class="chevron"></span></li>
+                <li data-step="2"><span class="badge">2</span>User Account<span class="chevron"></span></li>
+                <li data-step="3"><span class="badge">3</span>Options<span class="chevron"></span></li>
+                <li data-step="4" class="last"><span class="badge">4</span>Create Account</li>
+              </ul>
+            </div>
+            <!-- end steps container -->
+
+            <!-- steps content -->
+            <div class="step-content">
+              <div class="step-pane active" data-step="1">
+                <form id="form1" data-parsley-validate novalidate>
+                  <p>Choose your account type:</p>
+                  <div class="fancy-radio">
+                    <label>
+                      <input type="radio" name="account-type" value="personal" required data-parsley-errors-container="#error-step1">
+                      <span><i></i>Personal</span>
+                    </label>
+                  </div>
+                  <div class="fancy-radio">
+                    <label class="fancy-radio">
+                      <input type="radio" name="account-type" value="business" >
+                      <span><i></i>Business</span>
+                    </label>
+                  </div>
+                  <div class="fancy-radio">
+                    <label class="fancy-radio">
+                      <input type="radio" name="account-type" value="enterprise">
+                      <span><i></i>Enterprise</span>
+                    </label>
+                  </div>
+                  <p id="error-step1"></p>
+                </form>
+              </div>
+              <div class="step-pane" data-step="2">
+                <form id="form2" data-parsley-validate novalidate>
+                  <p>Please provide email, username and password<br/>
+                    <em><small>Field marked * is required</small></em>
+                  </p>
+                  <div class="row">
+                    <div class="col-md-3">
+                      <div class="form-group">
+                        <label class="control-label" for="email">Email *</label>
+                        <input type="email" id="email" class="form-control" required>
+                      </div>
+                      <div class="form-group">
+                        <label class="control-label" for="password">Password *</label>
+                        <input type="password" id="password" name="password" class="form-control" required>
+                      </div>
+                      <div class="form-group">
+                        <label class="control-label" for="password2">Repeat Password *</label>
+                        <input type="password" id="password2" name="password2" class="form-control" required data-parsley-equalto="#password" data-parsley-equalto-message="Password doesn't match.">
+                      </div>
+                    </div>
+                  </div>
+                </form>
+              </div>
+              <div class="step-pane" data-step="3">
+                <form id="form3" data-parsley-validate novalidate>
+                  <div class="fancy-checkbox">
+                    <label><input type="checkbox" name="newsletter"><span>Subscribe to monthly newsletter</span></label>
+                  </div>
+                  <div class="fancy-checkbox">
+                    <label><input type="checkbox" name="terms"><span>I accept the <a href="#">Terms &amp; Agreements</a></span></label>
+                  </div>
+                </form>
+              </div>
+              <div class="step-pane" data-step="4">
+                <p class="lead"><i class="fa fa-check-circle text-success"></i> All is well! Click "Create My Account" to complete.</p>
+              </div>
+            </div>
+            <!-- end steps content -->
+
+            <!-- actions -->
+            <div class="actions">
+              <button type="button" class="btn btn-outline-light btn-prev"><i class="fa fa-arrow-left"></i> Prev</button>
+              <button type="button" class="btn btn-primary btn-next">Next <i class="fa fa-arrow-right"></i></button>
+            </div>
+            <!-- end actions -->
+          </div>
+        </div>
+      </div>
+      <!-- END MAIN CONTENT -->
+
+      @@include('./partials/right-sidebar.html')
+
+    </div>
+    <!-- END MAIN -->
+
+    <div class="clearfix"></div>
+    
+    @@include('./partials/footer.html')
+
+  </div>
+  <!-- END WRAPPER -->
+
+  <!-- Vendor -->
+  <script src="assets/js/vendor.min.js"></script>
+
+  <!-- Wizard Plugin -->
+  <script src="assets/plugins/fuelux/fuelux.min.js"></script>
+
+  <!-- Sweet Alerts Plugin -->
+  <script src="assets/plugins/sweetalert2/sweetalert2.all.min.js"></script>
+
+  <!-- Parsleyjs Validation Plugin -->
+  <script src="assets/plugins/parsleyjs/parsley.min.js"></script>
+
+  <!-- Wizard Init -->
+  <script src="assets/js/pages/wizard.init.min.js"></script>
+
+  <!-- App -->
+  <script src="assets/js/app.min.js"></script>
+</body>
+</html>

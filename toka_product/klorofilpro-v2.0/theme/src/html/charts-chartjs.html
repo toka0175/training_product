@@ -1,0 +1,204 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <title>Chart.js | Klorofil Pro - Bootstrap 4 Admin Dashboard Template</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+  <!-- Chart.js css -->
+  <link href="assets/plugins/chart.js/Chart.min.css" rel="stylesheet" type="text/css" />
+
+  <!-- App css -->
+  <link href="assets/css/bootstrap-custom.min.css" rel="stylesheet" type="text/css" />
+  <link href="assets/css/app.min.css" rel="stylesheet" type="text/css" />
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet">
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="assets/images/favicon.png">
+</head>
+<body>
+  <!-- WRAPPER -->
+  <div id="wrapper">
+
+    @@include('./partials/topbar.html')
+
+    @@include('./partials/left-sidebar.html', {"parentMenu": "charts", "activeMenu": "chartjs"})
+
+    <!-- MAIN -->
+    <div class="main">
+
+      <!-- MAIN CONTENT -->
+      <div class="main-content">
+
+        @@include('./partials/content-heading.html', {"title": "Chart.js", "subtitle": "Simple yet flexible JavaScript charting for designers & developers."})
+
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-md-6">
+              <!-- line chart -->
+              <div class="card">
+                  <div class="card-header">
+                    <h2 class="card-title">Line Chart</h2>
+                  </div>
+                  <div class="card-body">
+                    <p class="text-muted mb-3">Click legend below to toggle dataset visibility on chart</p>
+                    <canvas id="line-chart" height="150"></canvas>
+                    <form class="mt-4">
+                      <p class="text-muted">Play with controls below to see other chart options demo</p>
+                      <span class="fancy-checkbox">
+                        <label><input type="checkbox" id="straightLine"><span>Straight Lines</span></label>
+                      </span>
+                      <span class="fancy-checkbox">
+                        <label><input type="checkbox" id="diamondPoint"><span>Diamond Points</span></label>
+                      </span>
+                      <span class="fancy-checkbox">
+                        <label><input type="checkbox" id="stepped"><span>Stepped Line</span></label>
+                      </span>
+                    </form>
+                  </div>
+                </div>
+                <!-- end line chart -->
+
+                <!-- area chart -->
+                <div class="card">
+                  <div class="card-header">
+                    <h2 class="card-title">Area Chart</h2>
+                  </div>
+                  <div class="card-body">
+                    <canvas id="area-chart" height="150"></canvas>
+                    <form class="mt-4">
+                      <p class="text-muted">Play with controls below to see other chart options demo</p>
+                      <span class="fancy-checkbox">
+                        <label><input type="checkbox" id="straightArea"><span>Straight Area</span></label>
+                      </span>
+                      <span class="fancy-checkbox">
+                        <label><input type="checkbox" id="addRemoveAreaDataset"><span>Add/Remove Dataset</span></label>
+                      </span>
+                    </form>
+                  </div>
+                </div>
+                <!-- end area chart -->
+
+                <!-- pie chart -->
+                <div class="card">
+                  <div class="card-header">
+                    <h2 class="card-title">Pie Chart</h2>
+                  </div>
+                  <div class="card-body">
+                    <canvas id="pie-chart" height="150"></canvas>
+                    <form class="mt-4">
+                      <p class="text-muted">Play with controls below to see other chart options demo</p>
+                      <span class="fancy-checkbox">
+                        <label><input type="checkbox" id="addRemovePieDataset"><span>Add/Remove Dataset</span></label>
+                      </span>
+                    </form>
+                  </div>
+                </div>
+                <!-- end pie chart -->
+
+                <!-- polar chart -->
+                <div class="card">
+                  <div class="card-header">
+                    <h2 class="card-title">Polar Chart</h2>
+                  </div>
+                  <div class="card-body">
+                    <canvas id="polar-chart"></canvas>
+                  </div>
+                </div>
+                <!-- end polar chart -->
+            </div>
+            <div class="col-md-6">
+              <!-- bar chart -->
+              <div class="card">
+                <div class="card-header">
+                  <h2 class="card-title">Bar Chart</h2>
+                </div>
+                <div class="card-body">
+                  <canvas id="bar-chart" height="150"></canvas>
+                  <form class="mt-4">
+                    <p class="text-muted">Play with controls below to see other chart options demo</p>
+                    <span class="fancy-checkbox">
+                      <label><input type="checkbox" id="addRemoveBarDataset"><span>Add/Remove Dataset</span></label>
+                    </span>
+                  </form>
+                </div>
+              </div>
+              <!-- end bar chart -->
+
+              <!-- horizontal bar chart -->
+              <div class="card">
+                <div class="card-header">
+                  <h2 class="card-title">Horizontal Bar Chart</h2>
+                </div>
+                <div class="card-body">
+                  <canvas id="horizontalbar-chart" height="150"></canvas>
+                </div>
+              </div>
+              <!-- end horizontal bar chart -->
+
+              <!-- donut chart -->
+              <div class="card">
+                <div class="card-header">
+                  <h2 class="card-title">Doughnut Chart</h2>
+                </div>
+                <div class="card-body">
+                  <canvas id="donut-chart" height="150"></canvas>
+                  <form class="mt-4">
+                    <p class="text-muted">Play with controls below to see other chart options demo</p>
+                    <span class="fancy-checkbox">
+                      <label><input type="checkbox" id="addRemoveDonutDataset"><span>Add/Remove Dataset</span></label>
+                    </span>
+                  </form>
+                </div>
+              </div>
+              <!-- end donut chart -->
+
+              <!-- radar chart -->
+              <div class="card">
+                <div class="card-header">
+                  <h2 class="card-title">Radar Chart</h2>
+                </div>
+                <div class="card-body">
+                  <canvas id="radar-chart" height="150"></canvas>
+                  <form class="mt-4">
+                    <p class="text-muted">Play with controls below to see other chart options demo</p>
+                    <span class="fancy-checkbox">
+                      <label><input type="checkbox" id="addRemoveRadarDataset"><span>Add/Remove Dataset</span></label>
+                    </span>
+                  </form>
+                </div>
+              </div>
+              <!-- end radar chart -->
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- END MAIN CONTENT -->
+
+      @@include('./partials/right-sidebar.html')
+
+    </div>
+    <!-- END MAIN -->
+
+    <div class="clearfix"></div>
+    
+    @@include('./partials/footer.html')
+
+  </div>
+  <!-- END WRAPPER -->
+
+  <!-- Vendor -->
+  <script src="assets/js/vendor.min.js"></script>
+
+  <!-- Chart.js Plugin -->
+  <script src="assets/plugins/chart.js/Chart.min.js"></script>
+
+  <!-- Chart.js Init -->
+  <script src="assets/js/pages/charts-chartjs.init.min.js"></script>
+
+  <!-- App -->
+  <script src="assets/js/app.min.js"></script>
+</body>
+</html>

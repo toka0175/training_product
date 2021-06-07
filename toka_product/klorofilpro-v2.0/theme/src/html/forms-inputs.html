@@ -1,0 +1,919 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <title>Input Elements | Klorofil Pro - Bootstrap 4 Admin Dashboard Template</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+  
+  <!-- jQuery UI -->
+  <link href="assets/plugins/jquery-ui/jquery-ui.min.css" rel="stylesheet" type="text/css" />
+
+  <!-- Switchery -->
+  <link href="assets/plugins/switchery-latest/switchery.min.css" rel="stylesheet" type="text/css" />
+
+  <!-- App css -->
+  <link href="assets/css/bootstrap-custom.min.css" rel="stylesheet" type="text/css" />
+  <link href="assets/css/app.min.css" rel="stylesheet" type="text/css" />
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet">
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="assets/images/favicon.png">
+</head>
+<body>
+  <!-- WRAPPER -->
+  <div id="wrapper">
+
+    @@include('./partials/topbar.html')
+
+    @@include('./partials/left-sidebar.html', {"parentMenu": "forms", "activeMenu": "inputs"})
+
+    <!-- MAIN -->
+    <div class="main">
+
+      <!-- MAIN CONTENT -->
+      <div class="main-content">
+
+        @@include('./partials/content-heading.html', {"title": "Input Elements", "subtitle": "Bootstrap default and 3rd-party input elements"})
+
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-md-6">
+              <!-- autocomplete -->
+              <div class="card">
+                <div class="card-header">Autocomplete</div>
+                <div class="card-body">
+                  <form>
+                    <div class="form-group row">
+                      <label class="col-sm-3 col-form-label" >Autocomplete</label>
+                      <div class="col-sm-9">
+                        <input type="text" class="form-control" id="input-autocomplete" placeholder="Try to type 'a' or 'b'">
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+              <!-- end autocomplete -->
+
+              <!-- password inputs -->
+              <div class="card">
+                <div class="card-header">Password Inputs</div>
+                <div class="card-body">
+                  <form>
+                    <div class="form-group row">
+                      <label class="col-sm-4 col-form-label">Password Show/Hide</label>
+                      <div class="col-sm-8">
+                        <input type="password" class="form-control" id="password-showhide">
+                      </div>
+                    </div>
+                    <div class="form-group row">
+                      <label class="col-sm-4 col-form-label">Password Show/Hide</label>
+                      <div class="col-sm-8">
+                        <input type="password" class="form-control" id="password-showhide2">
+                      </div>
+                    </div>
+                    <div class="form-group row">
+                      <label class="col-sm-4 col-form-label">Password Strength</label>
+                      <div class="col-sm-8">
+                        <div class="password-strength-container">
+                          <input type="password" class="form-control" id="password-strength">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-group row">
+                      <label class="col-sm-4 col-form-label">Password Strength</label>
+                      <div class="col-sm-8">
+                        <div class="password-strength-container">
+                          <input type="password" class="form-control" id="password-strength2">
+                        </div>
+                      </div>
+                    </div>
+        
+                    <p>Validation Rules:</p>
+                    <code>
+                      wordNotEmail: true,<br>
+                      wordMinLength: true,<br>
+                      wordMaxLength: false,<br>
+                      wordInvalidChar: true,<br>
+                      wordSimilarToUsername: true,<br>
+                      wordSequences: true,<br>
+                      wordTwoCharacterClasses: false,<br>
+                      wordRepetitions: false,<br>
+                      wordLowercase: true,<br>
+                      wordUppercase: true,<br>
+                      wordOneNumber: true,<br>
+                      wordThreeNumbers: true,<br>
+                      wordOneSpecialChar: true,<br>
+                      wordTwoSpecialChar: true,<br>
+                      wordUpperLowerCombo: true,<br>
+                      wordLetterNumberCombo: true,<br>
+                      wordLetterNumberCharCombo: true<br>
+                    </code>
+                  </form>
+                </div>
+              </div>
+              <!-- end password inputs -->
+
+              <!-- masked input -->
+              <div class="card">
+                <div class="card-header">Masked Input</div>
+                <div class="card-body">
+                  <form>
+                    <div class="form-group row">
+                      <label for="phone" class="col-sm-2 col-form-label" >Phone</label>
+                      <div class="col-sm-10">
+                        <input type="text" id="phone" class="form-control">
+                        <span class="form-text text-muted">(999) 999-9999</span>
+                      </div>
+                    </div>
+                    <div class="form-group row">
+                      <label for="phone-ex" class="col-sm-2 col-form-label" >Phone + Ext</label>
+                      <div class="col-sm-10">
+                        <input type="text" id="phone-ex" class="form-control">
+                        <span class="form-text text-muted">(999) 999-9999? x99999</span>
+                      </div>
+                    </div>
+                    <div class="form-group row">
+                      <label for="tax-id" class="col-sm-2 col-form-label" >Tax ID</label>
+                      <div class="col-sm-10">
+                        <input type="text" id="tax-id" class="form-control">
+                        <span class="form-text text-muted">99-9999999</span>
+                      </div>
+                    </div>
+                    <div class="form-group row">
+                      <label for="ssn" class="col-sm-2 col-form-label" >SSN</label>
+                      <div class="col-sm-10">
+                        <input type="text" id="ssn" class="form-control">
+                        <span class="form-text text-muted">999-99-9999</span>
+                      </div>
+                    </div>
+                    <div class="form-group row">
+                      <label for="product-key" class="col-sm-2 col-form-label" >Product Key</label>
+                      <div class="col-sm-10">
+                        <input type="text" id="product-key" class="form-control">
+                        <span class="form-text text-muted">a*-999-a999</span>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+              <!-- end masked input -->
+
+              <!-- basic inputs -->
+              <div class="card">
+                <div class="card-header">Basic Inputs</div>
+                <div class="card-body">
+                  <form>
+                    <div class="form-group row">
+                      <label class="col-md-2 col-form-label">Text Field</label>
+                      <div class="col-md-10">
+                        <input type="text" class="form-control" placeholder="text field">
+                      </div>
+                    </div>
+                    <div class="form-group row">
+                      <label class="col-md-2 col-form-label">Password</label>
+                      <div class="col-md-10">
+                        <input type="password" class="form-control" value="asecret">
+                      </div>
+                    </div>
+                    <div class="form-group row">
+                      <label class="col-md-2 col-form-label">Textarea</label>
+                      <div class="col-md-10">
+                        <textarea class="form-control" placeholder="textarea" rows="4"></textarea>
+                      </div>
+                    </div>
+                    <div class="form-group row">
+                      <label class="col-md-2 col-form-label">Select</label>
+                      <div class="col-md-10">
+                        <select class="form-control">
+                          <option value="cheese">Cheese</option>
+                          <option value="tomatoes">Tomatoes</option>
+                          <option value="mozarella">Mozzarella</option>
+                          <option value="mushrooms">Mushrooms</option>
+                          <option value="pepperoni">Pepperoni</option>
+                          <option value="onions">Onions</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="form-group row">
+                      <label class="col-md-2 col-form-label">Multiple</label>
+                      <div class="col-md-10">
+                        <select multiple class="form-control">
+                          <option value="cheese">Cheese</option>
+                          <option value="tomatoes">Tomatoes</option>
+                          <option value="mozarella">Mozzarella</option>
+                          <option value="mushrooms">Mushrooms</option>
+                          <option value="pepperoni">Pepperoni</option>
+                          <option value="onions">Onions</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="form-group row">
+                      <label class="col-md-2 col-form-label">Checkbox</label>
+                      <div class="col-md-5">
+                        <div class="form-check">
+                          <input type="checkbox" class="form-check-input" id="defaultCheck1" value="">
+                          <label class="form-check-label" for="defaultCheck1">Item 1</label>
+                        </div>
+                        <div class="form-check">
+                          <input type="checkbox" class="form-check-input" id="defaultCheck2" value="">
+                          <label class="form-check-label" for="defaultCheck2">Item 2</label>
+                        </div>
+                        <div class="form-check">
+                          <input type="checkbox" class="form-check-input" id="defaultCheck3" value="" disabled>
+                          <label class="form-check-label" for="defaultCheck3">Item 3 (disabled)</label>
+                        </div>
+                      </div>
+                      <div class="col-md-5">
+                        <div class="custom-control custom-checkbox">
+                          <input type="checkbox" class="custom-control-input" id="customCheck1">
+                          <label class="custom-control-label" for="customCheck1">Custom checkbox 1</label>
+                        </div>
+                        <div class="custom-control custom-checkbox">
+                          <input type="checkbox" class="custom-control-input" id="customCheck2">
+                          <label class="custom-control-label" for="customCheck2">Custom checkbox 2</label>
+                        </div>
+                        <div class="custom-control custom-checkbox">
+                          <input type="checkbox" class="custom-control-input" id="customCheck3" disabled>
+                          <label class="custom-control-label" for="customCheck3">Custom checkbox 3 (disabled)</label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-group row">
+                      <label class="col-md-2 col-form-label">Inline Checkbox</label>
+                      <div class="col-md-10">
+                        <div class="form-check form-check-inline">
+                          <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                          <label class="form-check-label" for="inlineCheckbox1">Item 1</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                          <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+                          <label class="form-check-label" for="inlineCheckbox2">Item 2</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                          <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3" disabled>
+                          <label class="form-check-label" for="inlineCheckbox3">Item 3 (disabled)</label>
+                        </div>
+                        <br>
+                        <div class="custom-control custom-control-inline custom-checkbox">
+                          <input type="checkbox" class="custom-control-input" id="customCheck21">
+                          <label class="custom-control-label" for="customCheck21">Custom inline checkbox 1</label>
+                        </div>
+                        <div class="custom-control custom-control-inline custom-checkbox">
+                          <input type="checkbox" class="custom-control-input" id="customCheck22">
+                          <label class="custom-control-label" for="customCheck22">Custom inline checkbox 2</label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-group row">
+                      <label class="col-md-2 col-form-label">Radio Button</label>
+                      <div class="col-md-5">
+                        <div class="form-check">
+                          <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+                          <label class="form-check-label" for="exampleRadios1">
+                            Default radio
+                          </label>
+                        </div>
+                        <div class="form-check">
+                          <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
+                          <label class="form-check-label" for="exampleRadios2">
+                            Second default radio
+                          </label>
+                        </div>
+                        <div class="form-check">
+                          <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3" value="option3" disabled>
+                          <label class="form-check-label" for="exampleRadios3">
+                            Disabled radio
+                          </label>
+                        </div>
+                      </div>
+                      <div class="col-md-5">
+                        <div class="custom-control custom-radio">
+                          <input type="radio" id="customRadio1" name="customRadio" class="custom-control-input">
+                          <label class="custom-control-label" for="customRadio1">Custom radio 1</label>
+                        </div>
+                        <div class="custom-control custom-radio">
+                          <input type="radio" id="customRadio2" name="customRadio" class="custom-control-input">
+                          <label class="custom-control-label" for="customRadio2">Custom radio 2</label>
+                        </div>
+                        <div class="custom-control custom-radio">
+                          <input type="radio" id="customRadio3" name="customRadio" class="custom-control-input" disabled>
+                          <label class="custom-control-label" for="customRadio3">Custom radio 3</label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-group row">
+                      <label class="col-md-2 col-form-label">Inline Radio</label>
+                      <div class="col-md-10">
+                        <div class="form-check form-check-inline">
+                          <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                          <label class="form-check-label" for="inlineRadio1">1</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                          <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                          <label class="form-check-label" for="inlineRadio2">2</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                          <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3" disabled>
+                          <label class="form-check-label" for="inlineRadio3">3 (disabled)</label>
+                        </div>
+                        <br>
+                        <div class="custom-control custom-control-inline custom-radio">
+                          <input type="radio" id="customRadio21" name="customRadio2" class="custom-control-input">
+                          <label class="custom-control-label" for="customRadio21">Custom inline radio 1</label>
+                        </div>
+                        <div class="custom-control custom-control-inline custom-radio">
+                          <input type="radio" id="customRadio22" name="customRadio2" class="custom-control-input">
+                          <label class="custom-control-label" for="customRadio22">Custom inline radio 2</label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-group row">
+                      <label for="exampleInputFile" class="col-md-2 col-form-label">File input</label>
+                      <div class="col-md-10">
+                        <div class="custom-file">
+                          <input type="file" class="custom-file-input" id="customFile">
+                          <label class="custom-file-label" for="customFile">Choose file</label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-group row">
+                      <label class="col-sm-2 col-form-label">Range</label>
+                      <div class="col-sm-10">
+                        <input type="range" class="custom-range">
+                        <input type="range" class="custom-range" value="20" step="10">
+                      </div>
+                    </div>
+                    <div class="form-group row">
+                      <label class="col-sm-2 col-form-label">Switches</label>
+                      <div class="col-sm-10">
+                        <div class="custom-control custom-switch">
+                          <input type="checkbox" class="custom-control-input" id="customSwitch1">
+                          <label class="custom-control-label" for="customSwitch1">Toggle this switch element</label>
+                        </div>
+                        <div class="custom-control custom-switch">
+                          <input type="checkbox" class="custom-control-input" disabled id="customSwitch2">
+                          <label class="custom-control-label" for="customSwitch2">Disabled switch element</label>
+                        </div>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+              <!-- end basic inputs -->
+
+              <!-- input sizing -->
+              <div class="card">
+                <div class="card-header">Input Sizing</div>
+                <div class="card-body">
+                  <input class="form-control form-control-lg" placeholder=".form-control-lg" type="text"><br>
+                  <input class="form-control" placeholder="Default input" type="text"><br>
+                  <input class="form-control form-control-sm" placeholder=".form-control-sm" type="text"><br>
+                  <select class="form-control form-control-lg">
+                    <option value="cheese">Cheese</option>
+                    <option value="tomatoes">Tomatoes</option>
+                    <option value="mozarella">Mozzarella</option>
+                    <option value="mushrooms">Mushrooms</option>
+                    <option value="pepperoni">Pepperoni</option>
+                    <option value="onions">Onions</option>
+                  </select><br>
+                  <select class="form-control">
+                    <option value="cheese">Cheese</option>
+                    <option value="tomatoes">Tomatoes</option>
+                    <option value="mozarella">Mozzarella</option>
+                    <option value="mushrooms">Mushrooms</option>
+                    <option value="pepperoni">Pepperoni</option>
+                    <option value="onions">Onions</option>
+                  </select><br>
+                  <select class="form-control form-control-sm">
+                    <option value="cheese">Cheese</option>
+                    <option value="tomatoes">Tomatoes</option>
+                    <option value="mozarella">Mozzarella</option>
+                    <option value="mushrooms">Mushrooms</option>
+                    <option value="pepperoni">Pepperoni</option>
+                    <option value="onions">Onions</option>
+                  </select><br>
+
+                  <div class="input-group input-group-lg">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text" id="inputGroup-sizing-lg">Large</span>
+                    </div>
+                    <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg">
+                  </div><br>
+                  <div class="input-group">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text" id="inputGroup-sizing-default">Default</span>
+                    </div>
+                    <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                  </div><br>
+                  <div class="input-group input-group-sm">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text" id="inputGroup-sizing-sm">Small</span>
+                    </div>
+                    <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+                  </div>
+                </div>
+              </div>
+              <!-- end input sizing -->
+            </div>
+            <div class="col-md-6">
+              <!-- switches -->
+              <div class="card">
+                <div class="card-header">Switches</div>
+                <div class="card-body">
+                    <h4 class="h5">Pure CSS Switches</h4>
+                    <form>
+                      <div class="row">
+                        <div class="col-md-4">
+                          <p>Using ON/OFF label text</p>
+                          <label class="switch-input">
+                            <input type="checkbox" name="switch-checkbox" checked>
+                            <i data-swon-text="ON" data-swoff-text="OFF"></i>
+                            Web Notification
+                          </label>
+                          <label class="switch-input">
+                            <input type="checkbox" name="switch-checkbox">
+                            <i data-swon-text="ON" data-swoff-text="OFF"></i>
+                            Mobile Notification
+                          </label>
+                          <label class="switch-input">
+                            <input type="checkbox" name="switch-checkbox" checked>
+                            <i data-swon-text="ON" data-swoff-text="OFF"></i>
+                            Email Subscription
+                          </label>
+                        </div>
+                        <div class="col-md-4">
+                          <p>Using YES/NO label text</p>
+                          <label class="switch-input">
+                            <input type="checkbox" name="switch-checkbox">
+                            <i data-swon-text="YES" data-swoff-text="NO"></i>
+                            Subscription
+                          </label>
+                          <label class="switch-input">
+                            <input type="checkbox" name="switch-checkbox" checked>
+                            <i data-swon-text="YES" data-swoff-text="NO"></i>
+                            Auto Renewal
+                          </label>
+                          <label class="switch-input">
+                            <input type="checkbox" name="switch-checkbox">
+                            <i data-swon-text="YES" data-swoff-text="NO"></i>
+                            Reminder
+                          </label>
+                        </div>
+                        <div class="col-md-4">
+                          <p>Radio button behaviour</p>
+                          <label class="switch-input">
+                            <input type="radio" name="switch-radio">
+                            <i data-swon-text="ON" data-swoff-text="OFF"></i>
+                            Daily
+                          </label>
+                          <label class="switch-input">
+                            <input type="radio" name="switch-radio" checked>
+                            <i data-swon-text="ON" data-swoff-text="OFF"></i>
+                            Weekly
+                          </label>
+                          <label class="switch-input">
+                            <input type="radio" name="switch-radio">
+                            <i data-swon-text="ON" data-swoff-text="OFF"></i>
+                            Monthly
+                          </label>
+                        </div>
+                      </div>
+                    </form>
+                    
+                    <br>
+
+                    <h4 class="h5">Switches by Switchery</h4>
+                    <div class="row">
+                      <div class="col-md-6">
+                        <p>Default size</p>
+                        <input type="checkbox" class="js-switch" checked>
+                        <input type="checkbox" class="js-switch">
+          
+                        <br><br>
+          
+                        <p>Small size</p>
+                        <input type="checkbox" class="js-switch" checked data-size="small">
+                        <input type="checkbox" class="js-switch" data-size="small">
+          
+                        <br><br>
+          
+                        <p>Disabled</p>
+                        <input type="checkbox" class="js-switch" checked disabled="disabled">
+                        <input type="checkbox" class="js-switch" disabled="disabled">
+          
+                        <br><br>
+          
+                        <p>Checking state (On Click)</p>
+                        <input type="checkbox" class="js-switch" id="switch-check-click" checked>&nbsp;&nbsp;
+                        <button type="button" class="btn btn-default" id="btn-check-click">Click to check state</button>
+          
+                        <br><br>
+          
+                        <p>Checking state (On Change)</p>
+                        <input type="checkbox" class="js-switch" id="switch-check-change">&nbsp;&nbsp;
+                        <span class="label label-default" id="label-check-change"></span>
+                      </div>
+                      <div class="col-md-6">
+                        <p>Colors</p>
+                        <input type="checkbox" class="js-switch" checked data-color="orange"> <code>data-color="orange"</code>
+          
+                        <br><br>
+          
+                        <input type="checkbox" class="js-switch" checked data-color="purple"> <code>data-color="purple"</code>
+          
+                        <br><br>
+          
+                        <input type="checkbox" class="js-switch" checked data-color="yellow"> <code>data-color="yellow"</code>
+          
+                        <br><br>
+          
+                        <input type="checkbox" class="js-switch" checked data-color="red"> <code>data-color="red"</code>
+          
+                        <br><br>
+          
+                        <input type="checkbox" class="js-switch" checked data-color="blue"> <code>data-color="blue"</code>
+          
+                        <br><br>
+          
+                        <input type="checkbox" class="js-switch" checked data-color="#20B2AA"> <code>data-color="#20B2AA"</code>
+                      </div>
+                    </div>
+                </div>
+              </div>
+              <!-- end switches -->
+
+              <!-- styled checkbox and radio -->
+              <div class="card">
+                <div class="card-header">Non-Bootstrap Styled Checkboxes and Radios</div>
+                <div class="card-body">
+                  <div class="fancy-checkbox">
+                    <label>
+                      <input type="checkbox">
+                      <span>Fancy Checkbox 1</span>
+                    </label>
+                  </div>
+                  <div class="fancy-checkbox custom-color-green">
+                    <label>
+                      <input type="checkbox" checked>
+                      <span>Fancy Checkbox 2</span>
+                    </label>
+                  </div>
+                  <div class="fancy-checkbox custom-bgcolor-green">
+                    <label>
+                      <input type="checkbox" checked>
+                      <span>Fancy Checkbox 3</span>
+                    </label>
+                  </div>
+                  <br>
+                  <label class="fancy-checkbox custom-bgcolor-green"><input type="checkbox"><span>Fancy Checkbox 1</span></label>
+                  <label class="fancy-checkbox custom-bgcolor-green"><input type="checkbox" checked><span>Fancy Checkbox 2</span></label>
+                  <label class="fancy-checkbox custom-bgcolor-green"><input type="checkbox"><span>Fancy Checkbox 3</span></label>
+                  <br><br>
+                  <div class="fancy-radio">
+                    <label><input name="gender" value="male" type="radio"><span><i></i>Male</span></label>
+                  </div>
+                  <div class="fancy-radio">
+                    <label><input name="gender" value="female" type="radio"><span><i></i>Female</span></label>
+                  </div>
+                  <br>
+                  <label class="fancy-radio"><input name="gender2" value="male" type="radio"><span><i></i>Male</span></label>
+                  <label class="fancy-radio"><input name="gender2" value="female" type="radio" checked><span><i></i>Female</span></label>
+                  <br>
+                  <label class="fancy-radio custom-bgcolor-green"><input name="gender3" value="male" type="radio" checked><span><i></i>Male</span></label>
+                  <label class="fancy-radio custom-bgcolor-green"><input name="gender3" value="female" type="radio"><span><i></i>Female</span></label>
+                </div>
+              </div>
+              <!-- end styled checkbox and radio -->
+
+              <!-- custom input groups -->
+              <div class="card">
+                <div class="card-header">Custom Input Groups</div>
+                <div class="card-body">
+                  <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                      <label class="input-group-text" for="inputGroupSelect01">Options</label>
+                    </div>
+                    <select class="custom-select" id="inputGroupSelect01">
+                      <option selected>Choose...</option>
+                      <option value="1">One</option>
+                      <option value="2">Two</option>
+                      <option value="3">Three</option>
+                    </select>
+                  </div>
+                  <div class="input-group mb-3">
+                    <select class="custom-select" id="inputGroupSelect02">
+                      <option selected>Choose...</option>
+                      <option value="1">One</option>
+                      <option value="2">Two</option>
+                      <option value="3">Three</option>
+                    </select>
+                    <div class="input-group-append">
+                      <label class="input-group-text" for="inputGroupSelect02">Options</label>
+                    </div>
+                  </div>
+                  <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                      <button class="btn btn-outline-light" type="button">Button</button>
+                    </div>
+                    <select class="custom-select" id="inputGroupSelect03" aria-label="Example select with button addon">
+                      <option selected>Choose...</option>
+                      <option value="1">One</option>
+                      <option value="2">Two</option>
+                      <option value="3">Three</option>
+                    </select>
+                  </div>
+                  
+                  <div class="input-group">
+                    <select class="custom-select" id="inputGroupSelect04" aria-label="Example select with button addon">
+                      <option selected>Choose...</option>
+                      <option value="1">One</option>
+                      <option value="2">Two</option>
+                      <option value="3">Three</option>
+                    </select>
+                    <div class="input-group-append">
+                      <button class="btn btn-outline-light" type="button">Button</button>
+                    </div>
+                  </div><br>
+
+                  <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text" id="inputGroupFileAddon01">Upload</span>
+                    </div>
+                    <div class="custom-file">
+                      <input type="file" class="custom-file-input" id="inputGroupFile01" aria-describedby="inputGroupFileAddon01">
+                      <label class="custom-file-label" for="inputGroupFile01">Choose file</label>
+                    </div>
+                  </div>
+                  
+                  <div class="input-group mb-3">
+                    <div class="custom-file">
+                      <input type="file" class="custom-file-input" id="inputGroupFile02">
+                      <label class="custom-file-label" for="inputGroupFile02" aria-describedby="inputGroupFileAddon02">Choose file</label>
+                    </div>
+                    <div class="input-group-append">
+                      <span class="input-group-text" id="inputGroupFileAddon02">Upload</span>
+                    </div>
+                  </div>
+                  
+                  <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                      <button class="btn btn-outline-light" type="button" id="inputGroupFileAddon03">Button</button>
+                    </div>
+                    <div class="custom-file">
+                      <input type="file" class="custom-file-input" id="inputGroupFile03" aria-describedby="inputGroupFileAddon03">
+                      <label class="custom-file-label" for="inputGroupFile03">Choose file</label>
+                    </div>
+                  </div>
+                  
+                  <div class="input-group">
+                    <div class="custom-file">
+                      <input type="file" class="custom-file-input" id="inputGroupFile04" aria-describedby="inputGroupFileAddon04">
+                      <label class="custom-file-label" for="inputGroupFile04">Choose file</label>
+                    </div>
+                    <div class="input-group-append">
+                      <button class="btn btn-outline-light" type="button" id="inputGroupFileAddon04">Button</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- end custom input groups -->
+
+              <!-- input groups -->
+              <div class="card">
+                <div class="card-header">Input Groups</div>
+                <div class="card-body">
+                  <div class="input-group">
+                    <input class="form-control" type="text">
+                    <span class="input-group-append"><button class="btn btn-primary" type="button">Go!</button></span>
+                  </div><br>
+                  <div class="input-group">
+                    <span class="input-group-prepend">
+                      <button class="btn btn-primary" type="button">Go!</button>
+                    </span>
+                    <input class="form-control" type="text">
+                  </div><br>
+                  <div class="input-group">
+                    <span class="input-group-prepend"><span class="input-group-text"><i class="fa fa-user"></i></span></span>
+                    <input class="form-control" placeholder="Username" type="text">
+                  </div><br>
+                  <div class="input-group">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text">With textarea</span>
+                    </div>
+                    <textarea class="form-control"></textarea>
+                  </div><br>
+                  <div class="input-group">
+                    <input class="form-control" placeholder="Username" type="text">
+                    <span class="input-group-append"><span class="input-group-text"><i class="fa fa-user"></i></span></span>
+                  </div><br>
+                  <div class="input-group">
+                    <span class="input-group-prepend"><span class="input-group-text">$</span></span>
+                    <input class="form-control" type="text">
+                    <span class="input-group-append"><span class="input-group-text">.00</span></span>
+                  </div><br>
+                  <div class="input-group">
+                    <span class="input-group-prepend"><span class="input-group-text">@</span></span>
+                    <input type="text" class="form-control" placeholder="Username">
+                  </div><br>
+                  <div class="input-group">
+                    <input type="text" class="form-control">
+                    <span class="input-group-append"><span class="input-group-text">.00</span></span>
+                  </div><br>
+                  <div class="input-group">
+                    <span class="input-group-prepend"><span class="input-group-text">$</span></span>
+                    <input type="text" class="form-control">
+                    <span class="input-group-append"><span class="input-group-text">.00</span></span>
+                  </div><br>
+                  <div class="input-group">
+                    <input type="text" class="form-control">
+                    <span class="input-group-append"><button class="btn btn-outline-light" type="button">Go!</button></span>
+                  </div><br>
+
+                  <div class="input-group">
+                    <span class="input-group-prepend">
+                      <div class="input-group-text">
+                        <label class="fancy-checkbox">
+                          <input type="checkbox">
+                          <span></span>
+                        </label>
+                      </div>
+                    </span>
+                    <input type="text" class="form-control">
+                  </div><br>
+                  <div class="input-group">
+                    <span class="input-group-prepend">
+                      <div class="input-group-text">
+                        <label class="fancy-checkbox custom-color-green">
+                          <input type="checkbox" checked>
+                          <span></span>
+                        </label>
+                      </div>
+                    </span>
+                    <input type="text" class="form-control">
+                  </div><br>
+                  <div class="input-group">
+                    <span class="input-group-prepend">
+                      <div class="input-group-text">
+                        <label class="fancy-checkbox custom-bgcolor-green">
+                          <input type="checkbox" checked>
+                          <span></span>
+                        </label>
+                      </div>
+                    </span>
+                    <input type="text" class="form-control">
+                  </div><br>
+                  <div class="input-group">
+                    <span class="input-group-prepend">
+                      <div class="input-group-text">
+                        <div class="custom-control custom-checkbox">
+                          <input type="checkbox" class="custom-control-input" id="ig_customCheck2" checked>
+                          <label class="custom-control-label" for="ig_customCheck2"></label>
+                        </div>
+                      </div>
+                    </span>
+                    <input type="text" class="form-control">
+                  </div><br>
+
+                  <div class="input-group">
+                    <span class="input-group-prepend">
+                      <div class="input-group-text">
+                        <label class="fancy-radio">
+                          <input type="radio" name="radio1" checked>
+                          <span><i></i></span>
+                        </label>
+                      </div>
+                    </span>
+                    <input type="text" class="form-control">
+                  </div><br>
+                  <div class="input-group">
+                    <span class="input-group-prepend">
+                      <div class="input-group-text">
+                        <label class="fancy-radio custom-color-green">
+                          <input type="radio" name="radio2" checked>
+                          <span><i></i></span>
+                        </label>
+                      </div>
+                    </span>
+                    <input type="text" class="form-control">
+                  </div><br>
+                  <div class="input-group">
+                    <span class="input-group-prepend">
+                      <div class="input-group-text">
+                        <label class="fancy-radio custom-bgcolor-green">
+                          <input type="radio" name="radio3" checked>
+                          <span><i></i></span>
+                        </label>
+                      </div>
+                    </span>
+                    <input type="text" class="form-control">
+                  </div><br>
+                  <div class="input-group">
+                    <span class="input-group-prepend">
+                      <div class="input-group-text">
+                        <div class="custom-control custom-radio">
+                          <input type="radio" id="ig_customRadio1" name="ig_customRadio" class="custom-control-input" checked>
+                          <label class="custom-control-label" for="ig_customRadio1"></label>
+                        </div>
+                      </div>
+                    </span>
+                    <input type="text" class="form-control">
+                  </div><br>
+
+                  <div class="input-group">
+                    <span class="input-group-prepend">
+                      <button class="btn btn-outline-light" type="button">Go!</button>
+                    </span>
+                    <input type="text" class="form-control">
+                  </div><br>
+
+                  <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                      <button class="btn btn-outline-light dropdown-toggle" type="button" data-toggle="dropdown">Dropdown</button>
+                      <div class="dropdown-menu">
+                        <a class="dropdown-item" href="#">Action</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                        <a class="dropdown-item disabled" href="#">Disabled action</a>
+                        <div role="separator" class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">Separated link</a>
+                      </div>
+                    </div>
+                    <input type="text" class="form-control">
+                  </div><br>
+                  <div class="input-group">
+                    <input type="text" class="form-control">
+                    <div class="input-group-append">
+                      <button class="btn btn-outline-light dropdown-toggle" type="button" data-toggle="dropdown">Dropdown</button>
+                      <div class="dropdown-menu">
+                        <a class="dropdown-item" href="#">Action</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                        <a class="dropdown-item disabled" href="#">Disabled action</a>
+                        <div role="separator" class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">Separated link</a>
+                      </div>
+                    </div>
+                  </div><br>
+                  <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                      <button type="button" class="btn btn-outline-light">Action</button>
+                      <button type="button" class="btn btn-outline-light dropdown-toggle dropdown-toggle-split" data-toggle="dropdown">
+                        <span class="sr-only">Toggle Dropdown</span>
+                      </button>
+                      <div class="dropdown-menu">
+                        <a class="dropdown-item" href="#">Action</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                        <a class="dropdown-item disabled" href="#">Disabled action</a>
+                        <div role="separator" class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">Separated link</a>
+                      </div>
+                    </div>
+                    <input type="text" class="form-control">
+                  </div>
+                </div>
+              </div>
+              <!-- end input groups -->
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- END MAIN CONTENT -->
+
+      @@include('./partials/right-sidebar.html')
+
+    </div>
+    <!-- END MAIN -->
+
+    <div class="clearfix"></div>
+    
+    @@include('./partials/footer.html')
+
+  </div>
+  <!-- END WRAPPER -->
+
+  <!-- Vendor -->
+  <script src="assets/js/vendor.min.js"></script>
+
+  <!-- jQuery UI -->
+  <script src="assets/plugins/jquery-ui/jquery-ui.min.js"></script>
+
+  <!-- Password Strength -->
+  <script src="assets/plugins/pwstrength-bootstrap/pwstrength-bootstrap.min.js"></script>
+
+  <!-- Hide/Show Password -->
+  <script src="assets/plugins/hideshowpassword/hideshowpassword.min.js"></script>
+
+  <!-- Masked Input -->
+  <script src="assets/plugins/jquery.maskedinput/jquery.maskedinput.js"></script>
+
+  <!-- Switchery -->
+  <script src="assets/plugins/switchery-latest/switchery.min.js"></script>
+
+  <!-- Plugins init -->
+  <script src="assets/js/pages/forms-inputs.init.min.js"></script>
+
+  <!-- App -->
+  <script src="assets/js/app.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,241 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <title>Buttons | Klorofil Pro - Bootstrap 4 Admin Dashboard Template</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+  <!-- App css -->
+  <link href="assets/css/bootstrap-custom.min.css" rel="stylesheet" type="text/css" />
+  <link href="assets/css/app.min.css" rel="stylesheet" type="text/css" />
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet">
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="assets/images/favicon.png">
+</head>
+<body>
+  <!-- WRAPPER -->
+  <div id="wrapper">
+
+    @@include('./partials/topbar.html')
+
+    @@include('./partials/left-sidebar.html', {"parentMenu": "ui-elements", "activeMenu": "buttons"})
+
+    <!-- MAIN -->
+    <div class="main">
+
+      <!-- MAIN CONTENT -->
+      <div class="main-content">
+
+        @@include('./partials/content-heading.html', {"title": "Buttons", "subtitle": "A collection of buttons with various styles and functions."})
+
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-md-6">
+              <!-- card -->
+              <div class="card demo-button">
+                <div class="card-header">General Buttons</div>
+                <div class="card-body">
+                  <button type="button" class="btn btn-primary">Primary</button>
+                  <button type="button" class="btn btn-secondary">Secondary</button>
+                  <button type="button" class="btn btn-info">Info</button>
+                  <button type="button" class="btn btn-success">Success</button>
+                  <button type="button" class="btn btn-warning">Warning</button>
+                  <button type="button" class="btn btn-danger">Danger</button>
+                  <button type="button" class="btn btn-light">Light</button>
+                  <button type="button" class="btn btn-dark">Dark</button>
+                  <button type="button" class="btn btn-link">Link</button>
+
+                  <hr>
+
+                  <h4 class="h6">Button Outline</h4>
+                  <button type="button" class="btn btn-outline-primary">Primary</button>
+                  <button type="button" class="btn btn-outline-secondary">Secondary</button>
+                  <button type="button" class="btn btn-outline-info">Info</button>
+                  <button type="button" class="btn btn-outline-success">Success</button>
+                  <button type="button" class="btn btn-outline-warning">Warning</button>
+                  <button type="button" class="btn btn-outline-danger">Danger</button>
+                  <button type="button" class="btn btn-outline-light">Light</button>
+                  <button type="button" class="btn btn-outline-dark">Dark</button>
+
+                  <hr>
+
+                  <h4 class="h6">Disabled</h4>
+                  <button type="button" class="btn btn-primary" disabled>Primary</button>
+                  <button type="button" class="btn btn-secondary" disabled>Secondary</button>
+                  <button type="button" class="btn btn-info" disabled>Info</button>
+                  <button type="button" class="btn btn-success" disabled>Success</button>
+                  <button type="button" class="btn btn-warning" disabled>Warning</button>
+                  <button type="button" class="btn btn-danger" disabled>Danger</button>
+                  <button type="button" class="btn btn-light" disabled>Light</button>
+                  <button type="button" class="btn btn-dark" disabled>Dark</button>
+                  <button type="button" class="btn btn-link" disabled>Link</button>
+
+                </div>
+              </div>
+              <!-- end card -->
+
+              <!-- card -->
+              <div class="card demo-button">
+                <div class="card-header">Button Dropdown and Dropup</div>
+                <div class="card-body">
+                  <div class="btn-group">
+                    <button type="button" class="btn btn-outline-light dropdown-toggle" data-toggle="dropdown">Dropdown <span class="caret"></span></button>
+                    <ul class="dropdown-menu" role="menu">
+                      <li class="dropdown-item"><a href="#">Action</a></li>
+                      <li class="dropdown-item disabled"><a href="#">Disabled link</a></li>
+                      <li class="dropdown-item"><a href="#">Something else here</a></li>
+                      <li class="divider"></li>
+                      <li class="dropdown-item"><a href="#">Separated link</a></li>
+                    </ul>
+                  </div>
+
+                  <div class="btn-group dropup">
+                    <button type="button" class="btn btn-outline-light dropdown-toggle" data-toggle="dropdown">Dropup <span class="caret"></span></button>
+                    <ul class="dropdown-menu" role="menu">
+                      <li class="dropdown-item"><a href="#">Action</a></li>
+                      <li class="dropdown-item"><a href="#">Another Action</a></li>
+                      <li class="dropdown-item"><a href="#">Something else here</a></li>
+                    </ul>
+                  </div>
+
+                  <div class="btn-group">
+                    <button type="button" class="btn btn-outline-light dropdown-toggle" data-toggle="dropdown"><i class="fa fa-share-alt"></i> <span>Share</span>&nbsp;&nbsp; <span class="caret"></span></button>
+                    <ul class="dropdown-menu" role="menu">
+                      <li class="dropdown-item"><a href="#"><i class="fa fa-facebook"></i> Facebook</a></li>
+                      <li class="dropdown-item"><a href="#"><i class="fa fa-twitter"></i> Twitter</a></li>
+                      <li class="dropdown-item"><a href="#"><i class="fa fa-google-plus"></i> Google Plus</a></li>
+                    </ul>
+                  </div>
+
+                  <div class="btn-group">
+                    <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown"><i class="fa fa-share-alt"></i> <span>Share</span>&nbsp;&nbsp; <span class="caret"></span></button>
+                    <ul class="dropdown-menu" role="menu">
+                      <li class="dropdown-item"><a href="#"><i class="fa fa-facebook"></i> Facebook</a></li>
+                      <li class="dropdown-item"><a href="#"><i class="fa fa-twitter"></i> Twitter</a></li>
+                      <li class="dropdown-item"><a href="#"><i class="fa fa-google-plus"></i> Google Plus</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <!-- end card -->
+
+              <!-- card -->
+              <div class="card demo-button">
+                <div class="card-header">Button Sizing</div>
+                <div class="card-body">
+                  <button type="button" class="btn btn-primary btn-lg">Large Size</button>
+                  <button type="button" class="btn btn-primary">Default Size</button>
+                  <button type="button" class="btn btn-primary btn-sm">Small Size</button>
+                </div>
+              </div>
+              <!-- end card -->
+            </div>
+            <div class="col-md-6">
+              <!-- card -->
+              <div class="card demo-button">
+                <div class="card-header">Buttons with Icon</div>
+                <div class="card-body">
+                  <p>
+                    <button type="button" class="btn btn-primary"><i class="fa fa-refresh"></i> <span>Primary</span></button>
+                    <button type="button" class="btn btn-secondary"><i class="fa fa-plus-square"></i> <span>Secondary</span></button>
+                    <button type="button" class="btn btn-info"><i class="fa fa-info-circle"></i> <span>Info</span></button>
+                    <button type="button" class="btn btn-primary" disabled="disabled"><i class="fa fa-refresh fa-spin"></i> <span>Refreshing...</span></button>
+                  </p>
+
+                  <p>
+                    <button type="button" class="btn btn-outline-success"><i class="fa fa-check-circle"></i> <span>Success</span></button>
+                    <button type="button" class="btn btn-outline-warning"><i class="fa fa-warning"></i> <span>Warning</span></button>
+                    <button type="button" class="btn btn-outline-danger"><i class="fa fa-trash-o"></i> <span>Danger</span></button>
+                    <button type="button" class="btn btn-outline-primary" disabled="disabled"><i class="fa fa-spinner fa-spin"></i> <span>Loading...</span></button>
+                    <button type="button" class="btn btn-outline-danger"><i class="fa fa-heart"></i> <span>Love</span></button>
+                    <button type="button" class="btn btn-outline-danger"><span>Love</span> <i class="fa fa-heart"></i></button>
+                    <button type="button" class="btn btn-outline-danger"><span class="sr-only">Love</span> <i class="fa fa-heart"></i></button>
+                  </p>
+
+                  <p>
+                    <button type="button" class="btn btn-outline-light" title="Refresh"><i class="fa fa-refresh"></i> <span class="sr-only">Refresh</span></button>
+                    <button type="button" class="btn btn-outline-light" title="Copy"><i class="fa fa-files-o"></i> <span class="sr-only">Copy</span></button>
+                    <button type="button" class="btn btn-success" title="Save"><i class="fa fa-save"></i> <span class="sr-only">Save</span></button>
+                    <button type="button" class="btn btn-danger" title="Delete"><i class="fa fa-trash-o"></i> <span class="sr-only">Delete</span></button>
+                  </p>
+                </div>
+              </div>
+              <!-- end card -->
+
+              <!-- card -->
+              <div class="card demo-button">
+                <div class="card-header">Button Groups</div>
+                <div class="card-body">
+                  <div class="btn-group">
+                    <a class="btn btn-secondary" href="#"><i class="fa fa-align-left"></i></a>
+                    <a class="btn btn-secondary active" href="#"><i class="fa fa-align-center"></i></a>
+                    <a class="btn btn-secondary" href="#"><i class="fa fa-align-right"></i></a>
+                    <a class="btn btn-secondary" href="#"><i class="fa fa-align-justify"></i></a>
+                  </div><br><br>
+
+                  <div class="btn-group">
+                    <button type="button" class="btn btn-outline-light">Button 1</button>
+                    <button type="button" class="btn btn-outline-light active">Button 2</button>
+                    <div class="btn-group">
+                      <button type="button" class="btn btn-outline-light dropdown-toggle" data-toggle="dropdown">Dropdown <span class="caret"></span></button>
+                      <ul class="dropdown-menu">
+                        <li><a href="#">Dropdown link</a></li>
+                        <li><a href="#">Dropdown link</a></li>
+                      </ul>
+                    </div>
+                  </div><br><br>
+                  
+                  <div class="btn-group justify-content-between w-100">
+                    <a class="btn btn-outline-light" href="#">Left</a>
+                    <a class="btn btn-outline-light active" href="#">Middle</a>
+                    <a class="btn btn-outline-light" href="#">Right</a>
+                  </div><br><br>
+
+                  <div class="btn-group">
+                    <a class="btn btn-outline-light" href="#"><span class="sr-only">Refresh</span><i class="fa fa-refresh"></i></a>
+                    <a class="btn btn-success" href="#"><span class="sr-only">Ok</span><i class="fa fa-check"></i></a>
+                    <a class="btn btn-danger" href="#"><span class="sr-only">Remove</span><i class="fa fa-remove"></i></a>
+                  </div>
+                </div>
+              </div>
+              <!-- end card -->
+
+              <!-- card -->
+              <div class="card">
+                <div class="card-header">Block Buttons</div>
+                <div class="card-body">
+                  <div class="row">
+                    <div class="col-md-6"><button type="button" class="btn btn-primary btn-block">Button Block</button></div>
+                    <div class="col-md-6"><button type="button" class="btn btn-warning btn-block">Button Block</button></div>
+                  </div>
+                </div>
+              </div>
+              <!-- end card -->
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- END MAIN CONTENT -->
+
+      @@include('./partials/right-sidebar.html')
+
+    </div>
+    <!-- END MAIN -->
+
+    <div class="clearfix"></div>
+    
+    @@include('./partials/footer.html')
+
+  </div>
+  <!-- END WRAPPER -->
+
+  <!-- Vendor -->
+  <script src="assets/js/vendor.min.js"></script>
+
+  <!-- App -->
+  <script src="assets/js/app.min.js"></script>
+</body>
+</html>

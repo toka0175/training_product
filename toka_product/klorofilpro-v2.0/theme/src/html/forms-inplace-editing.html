@@ -1,0 +1,244 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <title>In-place Editing | Klorofil Pro - Bootstrap 4 Admin Dashboard Template</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+
+  <!-- jQuery UI required by datepicker editable -->
+  <link href="assets/plugins/jquery-ui/jquery-ui.min.css" rel="stylesheet" type="text/css" />
+  
+  <!-- App css -->
+  <link href="assets/css/bootstrap-custom.min.css" rel="stylesheet" type="text/css" />
+  <link href="assets/css/app.min.css" rel="stylesheet" type="text/css" />
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet">
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="assets/images/favicon.png">
+</head>
+<body>
+  <!-- WRAPPER -->
+  <div id="wrapper">
+
+    @@include('./partials/topbar.html')
+
+    @@include('./partials/left-sidebar.html', {"parentMenu": "forms", "activeMenu": "inplace-editing"})
+
+    <!-- MAIN -->
+    <div class="main">
+
+      <!-- MAIN CONTENT -->
+      <div class="main-content">
+
+        @@include('./partials/content-heading.html', {"title": "In-place Editing", "subtitle": "In-place editing allows you to create editable elements on your page."})
+
+        <div class="container-fluid">
+          <div class="card">
+            <div class="card-header">Basic</div>
+            <div class="card-body">
+              <p class="text-muted">For text input without button, hit enter to submit</p>
+              <div class="row">
+                <div class="col-lg-6">
+                  <form>
+                    <div class="form-group row">
+                      <label class="col-form-label col-sm-4">Basic example</label>
+                      <div class="col-sm-6">
+                        <div class="editable-wrapper">
+                          <span class="editable editable-text">Click to edit</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-group row">
+                      <label class="col-form-label col-sm-4">Advanced example</label>
+                      <div class="col-sm-6">
+                        <div class="editable-wrapper">
+                          <span class="editable editable-text-full">Click to edit</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-group row">
+                      <label class="col-form-label col-sm-4">Textarea</label>
+                      <div class="col-sm-6">
+                        <div class="editable-wrapper">
+                          <span class="editable editable-textarea">Click to edit</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-group row">
+                      <label class="col-form-label col-sm-4">Checkbox</label>
+                      <div class="col-sm-6">
+                        <div class="editable-wrapper">
+                          <span class="editable editable-checkbox">Click to edit</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-group row">
+                      <label class="col-form-label col-sm-4">Inline Select</label>
+                      <div class="col-sm-6">
+                        <div class="editable-wrapper">
+                          <span class="editable editable-select">Click to edit</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-group row">
+                      <label class="col-form-label col-sm-4">Multiple Select</label>
+                      <div class="col-sm-6">
+                        <div class="editable-wrapper">
+                          <span class="editable multiple-select">Click to edit</span>
+                        </div>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+                <div class="col-lg-6">
+                  <form>
+                    <div class="form-group row">
+                      <label class="col-form-label col-sm-4">On Double Click</label>
+                      <div class="col-sm-6">
+                        <div class="editable-wrapper">
+                          <span class="editable editable-text-dbclick">Double click to edit</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-group row">
+                      <label class="col-form-label col-sm-4">On Mouse Over</label>
+                      <div class="col-sm-6">
+                        <div class="editable-wrapper">
+                          <span class="editable editable-text-hover">Mouse over to edit</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-group row">
+                      <label class="col-form-label col-sm-4">Email Input</label>
+                      <div class="col-sm-6">
+                        <div class="editable-wrapper">
+                          <span class="editable editable-email">click@edit.me</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-group row">
+                      <label class="col-form-label col-sm-4">Number Input</label>
+                      <div class="col-sm-8">
+                        <div class="editable-wrapper">
+                          <span class="editable editable-number">598</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-group row">
+                      <label class="col-form-label col-sm-4">URL Input</label>
+                      <div class="col-sm-8">
+                        <div class="editable-wrapper">
+                          <span class="editable editable-url">https://themeineed.com</span>
+                        </div>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          
+          </div>
+
+          <div class="card">
+            <div class="card-header">Advanced</div>
+            <div class="card-body">
+              <p class="text-muted">For text input without button, hit enter to submit</p>
+              <div class="row">
+                <div class="col-lg-6">
+                  <div class="form">
+                    <div class="form-group row">
+                      <label class="col-form-label col-sm-4">Datepicker</label>
+                      <div class="col-sm-6">
+                        <div class="editable-wrapper">
+                          <span class="editable editable-datepicker">05-11-2019</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-group row">
+                      <label class="col-form-label col-sm-4">Timepicker</label>
+                      <div class="col-sm-6">
+                        <div class="editable-wrapper">
+                          <span class="editable editable-timepicker">16:30</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-6">
+                  <div class="form">
+                    <div class="form-group row">
+                      <label class="col-form-label col-sm-4">Masked Input</label>
+                      <div class="col-sm-6">
+                        <div class="editable-wrapper">
+                          <span class="editable editable-masked">(123) 456-7890</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-group row">
+                      <label class="col-form-label col-sm-4">Character Counter</label>
+                      <div class="col-sm-6">
+                        <div class="editable-wrapper">
+                          <span class="editable editable-charcounter">The number of characters in the textarea will be counted.</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <form>
+                <div class="form-group row">
+                  <label class="col-form-label col-sm-2">Autogrow Texarea</label>
+                  <div class="col-sm-10">
+                    <div class="editable-wrapper">
+                      <span class="editable editable-autogrow">A jQuery plugin that allows textareas to grow vertically when text is typed in.</span>
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- END MAIN CONTENT -->
+
+      @@include('./partials/right-sidebar.html')
+
+    </div>
+    <!-- END MAIN -->
+
+    <div class="clearfix"></div>
+    
+    @@include('./partials/footer.html')
+
+  </div>
+  <!-- END WRAPPER -->
+
+  <!-- Vendor -->
+  <script src="assets/js/vendor.min.js"></script>
+
+  <!-- Jeditable -->
+  <script src="assets/plugins/jquery-jeditable/jquery.jeditable.min.js"></script>
+
+  <!-- Jeditable Plugins/Extensions -->
+  <script src="assets/plugins/jquery-ui/jquery-ui.min.js"></script> <!-- required by datepicker plugin -->
+  <script src="assets/plugins/jquery-jeditable/jquery.autogrowtextarea.js"></script>
+  <script src="assets/plugins/jquery-jeditable/jquery.charcounter.js"></script>
+  <script src="assets/plugins/jquery.maskedinput/jquery.maskedinput.js"></script>
+
+  <script src="assets/plugins/jquery-jeditable/jquery.jeditable.checkbox.js"></script>
+  <script src="assets/plugins/jquery-jeditable/jquery.jeditable.datepicker.min.js"></script>
+  <script src="assets/plugins/jquery-jeditable/jquery.jeditable.autogrow.min.js"></script>
+  <script src="assets/plugins/jquery-jeditable/jquery.jeditable.charcounter.min.js"></script>
+  <script src="assets/plugins/jquery-jeditable/jquery.jeditable.masked.min.js"></script>
+
+  <!-- Jeditable Init -->
+  <script src="assets/js/pages/forms-inplace-editing.init.js"></script>
+
+  <!-- App -->
+  <script src="assets/js/app.min.js"></script>
+</body>
+</html>

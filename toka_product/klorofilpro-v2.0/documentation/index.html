@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<head>
+	<title>Documentation | Klorofil Pro - Bootstrap Admin Dashboard</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="author" content="The Develovers">
+
+	<!-- CSS -->
+	<link href="assets/css/bootstrap.css" rel="stylesheet" type="text/css">
+	<link href="assets/css/shCore.css" rel="stylesheet" type="text/css">
+	<link href="assets/css/shThemeDefault.css" rel="stylesheet" type="text/css">
+	<link href="assets/css/style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+	<div class="container">
+		<header>
+			<img src="assets/img/logo-dark.png" alt="Klorofil Pro Logo"> <em>v2.0</em>
+			<h1>Klorofil Pro - Bootstrap Admin Dashboard Documentation</h1>
+		</header>
+		<div class="row main">
+			<div class="col-md-3">
+				<nav class="main-nav affix">
+					<ul class="list-unstyled">
+						<li><a href="#introduction">Introduction</a></li>
+						<li><a href="#layout-structure">Layout Structure</a></li>
+						<li><a href="#layout-options">Layout Options</a></li>
+						<li><a href="#color-options">Color Options</a></li>
+						<li><a href="#credits">Credits</a></li>
+					</ul>
+				</nav>
+			</div>
+			<div class="col-md-9">
+				<section id="introduction">
+					<h2>Introduction</h2>
+					<p>Thank you for purchasing Klorofil Pro. By reading this documentation we hope you will get the most of its features. If you have any questions that are beyond the scope of this help file, please feel free to contact us at <a href="mailto:support@themeineed.com">support@themeineed.com</a>. <strong><u>Don't forget to provide purchase document/payment key or theme license ID</u></strong> in your support message so we can validate your purchase and give you support.</a></p>
+				</section>
+
+				<section id="angular4">
+					<h3>Prerequisites</h3>
+					<p>Before you started, make sure you have installed Node.js and npm.</p>
+					<p><strong>NOTE: You don't need these steps if you plan to use HTML-ready version at <code>theme-dist/</code> directory</strong></p>
+					<p>To check if you have Node.js installed, run this command in your terminal:</p>
+					<div class="well">
+						$ node -v
+					</div>
+					<p>To check if you have npm installed, run this command in your terminal:</p>
+					<div class="well">
+						$ npm -v
+					</div>
+					<p>If you don't have Node.js installed, please download and install it from <a href="https://nodejs.org/">Node.js</a>. Note that installing Node.js also install npm.</p>
+
+					<h3>Running Project on Local Development Server</h3>
+					<p>In terminal, go to app root directory and run the following command to install dependencies</p>
+					<div class="well">
+						$ cd theme <br>
+						$ npm install
+					</div>
+					<p>It may takes some times. Once finished run command</p>
+					<div class="well">
+						$ gulp
+					</div>
+
+					<p>After the process is finished, notice that a new directory <code>dist/</code> is created. In this stage, you can get compiled theme HTML along with the assets, CSS and JS files on that directory.</p>
+					
+					<p>For development purposes, you should watch files changes with the following command:</p>
+					<div class="well">
+						$ gulp watch
+					</div>
+
+					<p>It should automatically open the site at http://localhost:3000 and the page will reload if you make edits on <code>src/</code>. 
+						You can either work based on <code>dist/</code> directory or ideally you make edit at <code>src/</code> and get the final result at <code>dist/</code> directory. 
+						<code>src/</code> directory provides separation of layout structure between header, main content and footer for easier development.
+					</p>
+				</section>
+
+				<section id="layout-structure">
+					<h2>Layout Structure</h2>
+					<img src="assets/img/layout.jpg" alt="Layout Structure" class="img-responsive"><br>
+					<p>Several main HTML elements you need to be familiar with:</p>
+					<ul>
+						<li><code>#wrapper</code> main container of the template</li>
+						<li><code>navbar navbar-expand fixed-top</code> top navigation, fixed-top by default</li>
+						<li><code>#sidebar-nav</code> left navigation menu</li>
+						<li><code>.main</code> main container for the content</li>
+						<li><code>footer</code> main container for footer</li>
+					</ul>
+
+					<h3>HEAD</h3>
+					<p>The <code>&lt;head /&gt;</code> element contains necessary metadata and styles.</p>
+					
+					<script type="syntaxhighlighter" class="brush: html">
+					<![CDATA[
+						<!doctype html>
+						<html lang="en">
+						<head>
+							<title>Page Title | Klorofil Pro - Bootstrap 4 Admin Dashboard Template</title>
+							<meta charset="utf-8">
+							<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+							<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+						
+							<!-- App css -->
+							<link href="assets/css/bootstrap-custom.min.css" rel="stylesheet" type="text/css" />
+							<link href="assets/css/app.min.css" rel="stylesheet" type="text/css" />
+						
+							<!-- Fonts -->
+							<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet">
+						
+							<!-- Favicon -->
+							<link rel="shortcut icon" href="assets/images/favicon.png">
+						</head>
+					]]>
+					</script>
+
+					<h3>TOP NAVIGATION (Default)</h3>
+					<script type="syntaxhighlighter" class="brush: html">
+					<![CDATA[
+						<nav class="navbar navbar-expand fixed-top">
+							<div class="navbar-brand d-none d-lg-block">
+								<a href="index.html"><img src="assets/images/logo-white.png" alt="Klorofil Pro Logo" class="img-fluid logo"></a>
+							</div>
+							<div class="container-fluid p-0">
+								<button id="tour-fullwidth" type="button" class="btn btn-default btn-toggle-fullwidth"><i class="ti-arrow-circle-left"></i></button>
+								<form class="form-inline search-form mr-auto d-none d-sm-block">...</form>
+								<div id="navbar-menu"> ... </div>
+							</div>
+						</nav>
+					]]>
+					</script>
+
+					<h3>LEFT NAVIGATION</h3>
+					<script type="syntaxhighlighter" class="brush: html">
+					<![CDATA[
+						<div id="sidebar-nav" class="sidebar">
+							<nav>
+								<ul class="nav" id="sidebar-nav-menu">
+									<li class="menu-group">Main</li>
+									<li class="panel">
+										<a href="#dashboards" data-toggle="collapse" data-parent="#sidebar-nav-menu" aria-expanded="true" class="active"><i class="ti-dashboard"></i> <span class="title">Dashboards</span> <i class="icon-submenu ti-angle-left"></i></a>
+										<div id="dashboards" class="collapse show ">
+											<ul class="submenu">
+												<li><a href="index.html" class="active">Dashboard v1</a></li>
+												<li><a href="dashboard2.html" class="">Dashboard v2</a></li>
+												<li><a href="dashboard3.html" class="">Dashboard v3</a></li>
+												<li><a href="dashboard4.html" class="">Dashboard v4</a></li>
+											</ul>
+										</div>
+									</li>
+									<li class="panel"> ... </div>
+								</ul>
+								<button type="button" class="btn-toggle-minified" title="Toggle Minified Menu"><i class="ti-arrows-horizontal"></i></button>
+							</nav>
+						</div>
+					]]>
+					</script>
+					<p>By default, left navigation is fixed positioned, thus need to be a scrollable element. However, minified navigation isn't scrollable.</p>
+					
+					<h3>MAIN</h3>
+					<script type="syntaxhighlighter" class="brush: html">
+					<![CDATA[
+						<div class="main">
+							<!-- MAIN CONTENT -->
+							<div class="main-content">
+								<div class="content-heading">
+									<div class="heading-left">
+										<h1 class="page-title">Blank Page</h1>
+										<p class="page-subtitle">Create your new page based on this starter page.</p>
+									</div>
+									<nav aria-label="breadcrumb">
+										<ol class="breadcrumb">
+											<li class="breadcrumb-item"><a href="#"><i class="fa fa-home"></i> Home</a></li>
+											<li class="breadcrumb-item"><a href="#">Parent</a></li>
+											<li class="breadcrumb-item active">Current</li>
+										</ol>
+									</nav>
+								</div>
+								<div class="container-fluid">
+									<!-- your content goes here -->
+								</div>
+							</div>
+							<!-- END MAIN CONTENT -->
+						</div>
+
+					]]>
+					</script>
+				</section>
+
+				<section id="css-js">
+					<h2>CSS and Javascript</h2>
+					<p>You can find template CSS at <code>assets/css/main.css</code> and all skin files at <code>assets/css/skins/</code> directory. If you use Sass, you will find all the .scss files at <code>sass/</code> directory, with main file <code>main.scss</code> and skin Sass file at <code>sass/skins/</code> directory. CSS files for 3rd-party plugins are located at each plugin directory at <code>assets/vendor/</code>.</p>
+
+					<p>Javascript file needed in all pages are:</p> 
+					<ul>
+						<li><code>assets/vendor/jquery/jquery.min.js</code></li>
+						<li><code>assets/vendor/bootstrap/js/bootstrap.min.js</code></li>
+						<li><code>assets/vendor/pace/pace.min.js"</code></li>
+						<li><code>assets/scripts/klorofilpro-common.js</code></li>
+					</ul>
+
+					<p>Klorofil Pro uses many 3rd-party plugins, with its javascripts located at each plugin directory at <code>assets/vendor/</code>. A page might need plugins with its data, configuration and initialization scripts. You will find scripts needed on the bottom of each page with specific plugins.</p>
+				</section>
+
+				<section id="layout-options">
+					<h2>Layout Options</h2>
+					<p>Klorofil Pro provide 3 additional layouts as options: Minified (<code>layout-minified.html</code>), Fullwidth (<code>layout-fullwidth.html</code>) and Top Navigation (<code>layout-topnav.html</code>).</p>
+
+					<h3>Minified</h3>
+					<script type="syntaxhighlighter" class="brush: html">
+					<![CDATA[
+						<!doctype html>
+						<html lang="en">
+
+						<head> </head>
+						<body class="sidebar-minified">
+
+						</body>
+						</html>
+					]]>
+					</script>
+
+					<h3>Fullwidth</h3>
+					<script type="syntaxhighlighter" class="brush: html">
+					<![CDATA[
+						<!doctype html>
+						<html lang="en">
+
+						<head> </head>
+						<body class="layout-default layout-fullwidth">
+
+						</body>
+						</html>
+					]]>
+					</script>
+
+					<h3>Top Navigation</h3>
+					<script type="syntaxhighlighter" class="brush: html">
+					<![CDATA[
+						<!doctype html>
+						<html lang="en">
+
+						<head> </head>
+						<body class="layout-topnav">
+
+						</body>
+						</html>
+					]]>
+					</script>
+
+				</section>
+
+				<section id="color-options">
+					<h2>Color Options</h2>
+					<p>Klorofil Pro provides color options for left sidebar navigation and top navigation bar. In the example below, we use sidebar navigation with light color skin.<code>sidebar-nav-gray.css</code>. You can find the skin files at <code>assets/css/skins/</code> directory.</p>
+					<script type="syntaxhighlighter" class="brush: html">
+					<![CDATA[
+						<!doctype html>
+						<html lang="en">
+
+						<head>
+							<title>Blank Page | Klorofil Pro - Bootstrap 4 Admin Dashboard Template</title>
+							<meta charset="utf-8">
+							<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+							<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+							<!-- App css -->
+							<link href="assets/css/bootstrap-custom.min.css" rel="stylesheet" type="text/css" />
+							<link href="assets/css/app.min.css" rel="stylesheet" type="text/css" />
+
+							<!-- Skin css -->
+							<link href="assets/css/skins/sidebar-nav-gray.css" rel="stylesheet" type="text/css" />
+
+							<!-- Fonts -->
+							<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet">
+						
+							<!-- Favicon -->
+							<link rel="shortcut icon" href="assets/images/favicon.png">
+						</head>
+					]]>
+					</script>
+				</section>
+
+				<section id="credits">
+					<h2>Credits</h2>
+					<ul>
+						<li><a href="https://itsjavi.com/bootstrap-colorpicker/">Bootstrap Colorpicker</li></a>
+						<li><a href="https://github.com/eternicode/bootstrap-datepicker">Datepicker</li></a>
+						<li><a href="http://github.com/toopay/bootstrap-markdown">Bootstrap Markdown</li></a>
+						<li><a href="https://github.com/davidstutz/bootstrap-multiselect">Bootstrap Multiselect</li></a>
+						<li><a href="http://www.minddust.com/project/bootstrap-progressbar/">Bootstrap Progressbar</li></a>
+						<li><a href="http://www.eyecon.ro/bootstrap-slider">Bootstrap Slider</li></a>
+						<li><a href="https://gionkunz.github.io/chartist-js/">Chartist.js</li></a>
+						<li><a href="http://datatables.net/">Datatables</li></a>
+						<li><a href="https://github.com/JeremyFagis/dropify">Dropify</li></a>
+						<li><a href="http://dropzonejs.com/">Dropzone</li></a>
+						<li><a href="http://www.flotcharts.org/">Flot</li></a>
+						<li><a href="http://fontawesome.io/">Font Awesome</li></a>
+						<li><a href="http://www.vincentbroute.fr/mapael">Jquery Mapael</li></a>
+						<li><a href="https://github.com/jquery/jquery-mousewheel">jQuery Mousewheel</li></a>
+						<li><a href="http://rocha.la/jQuery-slimScroll">jQuery SlimScroll</li></a>
+						<li><a href="http://omnipotent.net/jquery.sparkline/">jQuery Sparkline</li></a>
+						<li><a href="https://rendro.github.io/easy-pie-chart/">jQuery easyPieChart</li></a>
+						<li><a href="http://digitalbush.com/projects/masked-input-plugin/">jQuery Masked Input</li></a>
+						<li><a href="https://momentjs.com/">Moment.js</li></a>
+						<li><a href="https://refreshless.com/nouislider/">NoUISlider</li></a>
+						<li><a href="http://parsleyjs.org">Parsley.js</li></a>
+						<li><a href="http://summernote.org/">Summernote</li></a>
+						<li><a href="https://github.com/CodeSeven/toastr">Toastr</li></a>
+						<li><a href="https://github.com/NicolasCARPi/jquery_jeditable">jQuery Editable</li></a>
+						<li><a href="http://bootstraptour.com/">Bootstrap Tour</a></li>
+						<li><a href="https://limonte.github.io/sweetalert2/">Sweet Alert 2</a></li>
+						<li><a href="https://github.com/RamonSmit/Nestable">Nestable</a></li>
+						<li><a href="http://jqueryui.com">jQuery UI</a></li>
+						<li><a href="https://github.com/ExactTarget/fuelux">Fuel UX Wizard</a></li>
+						<li><a href="http://jstree.com/">jsTree</a></li>
+						<li><a href="https://themify.me/themify-icons">Themify Icons</a></li>
+						<li><a href="http://jqvmap.com">JQVMap</a></li>
+						<li><a href="http://chartjs.org/">Chart.Js</a></li>
+						<li><a href="https://select2.github.io">Select2</a></li>
+						<li><a href="http://weareoutman.github.io/clockpicker/">ClockPicker</a></li>
+						<li><a href="https://github.com/cloudfour/hideShowPassword">hideShowPassword</a></li>
+						<li><a href="https://github.com/ablanco/jquery.pwstrength.bootstrap">jQuery Password Strength</a></li>
+						<li><a href="http://abpetkov.github.io/switchery/">Switchery</a></li>
+						<li><a href="http://www.justgage.com ">JustGage</a></li>
+						<li><a href="http://github.hubspot.com/pace/docs/welcome/">Pace</a></li>
+					</ul>
+				</section>
+			</div>
+		</div>
+	</div>
+
+	<!-- Javascript -->
+	<script type="text/javascript" src="assets/js/shCore.js"></script>
+	<script type="text/javascript" src="assets/js/shBrushXml.js"></script>
+	<script type="text/javascript" src="assets/js/shBrushCss.js"></script>
+	<script type="text/javascript" src="assets/js/shBrushJScript.js"></script>
+	<script type="text/javascript" src="assets/js/shBrushPhp.js"></script>
+
+	<script type="text/javascript">
+		SyntaxHighlighter.all()
+	</script>
+
+</body>
+</html>

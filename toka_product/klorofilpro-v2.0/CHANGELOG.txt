@@ -1,0 +1,87 @@
+//************************//
+//	CHANGELOG
+//************************//
+
+Version 2.0, 06-03-2020
+- Bootstrap 4 compatibility
+- IMPROVED project structured and tools with modern workflow (Gulp, NPM)
+- UPGRADED most of the plugins 
+- REMOVED Angular 4 CLI Starter version
+- REMOVED Ajax version
+
+Version 1.6, 07-09-2017
+- ADDED Ajax version
+- ADDED new dashboard page
+- ADDED new top navigation layout
+- ADDED new widgets
+- ADDED top loading progress
+- ADDED gauge meter
+- ADDED outline buttons
+- CHANGED file naming index*.html to dashboard*.html
+- CHANGED skins are used by default
+
+Version 1.5, 18-08-2017
+- ADDED Angular 4 CLI Starter version
+- ADDED form input elements such as select2, autocomplete, show/hide password, switches, time picker, password strength indicator
+- ADDED social buttons
+- ADDED toggle for minified layout
+- ADDED animation on some widgets
+- REMOVED slimscroll from sidebar
+- CHANGED top navbar dropdown effect using CSS3 animation instead of jQuery
+- FIXED submenu color skin on minified layout mode 
+
+Version 1.4, 05-08-2017
+- ADDED new app view: Project List
+- ADDED new app view: Project Detail
+- ADDED JQVMap
+- ADDED more widgets
+- ADDED support for multilevel menu
+- IMPROVED dashboard design and details, also with new widgets and UI components
+- CHANGED left navigation menu, remove JS dependency
+- FIXED some misc bugs and unexpected behaviour in term of functions and visual
+
+Version 1.3, 12-07-2017
+- ADDED Sweet Alert
+- ADDED Sortable
+- ADDED Nestable
+- ADDED Drag and drop panel
+- ADDED Wizard
+- ADDED Tree View
+- ADDED File Manager
+- ADDED Grid page
+- IMPROVED content heading with title and subtitle on page
+- IMPROVED top navigation, sidebar, panel look and feel
+- IMPROVED flot charts color, dropdown menu
+- IMPROVED dashboard v1 with drag and drop panel
+- CHANGED page with content menu such as inbox page, better structure and consistency
+- CHANGED linearicons, replaced with themify icons that provide more icons with better look
+- FIXED main content height for page with minified menu
+- FIXED some scripts without jQuery ready function
+
+
+Version 1.2, 18-04-2017
+- ADDED new dashboard
+- ADDED Bootstrap Tour
+- ADDED 8 new skins
+- IMPROVED left sidebar toggle behaviour
+- IMPROVED notification dropdown
+- IMPROVED top navigation bar on mobile screen
+- IMPROVED overall look & feel including panel, buttons, navbar, sidebar
+- CHANGED page title heading
+
+Version 1.1, 03-04-2017
+- ADDED new dashboard
+- ADDED multiselect radio button (single selection)
+- ADDED profile completeness meter
+- IMPROVED panel look and feel
+- CHANGED full white is now a default theme color
+- FIXED breadcrumb on mobile screen
+- FIXED min-height for shorter main content
+- FIXED multiple chart (chartist)
+- FIXED footer on mobile screen
+- FIXED navbar submenu gap when opened on mobile screen
+- FIXED dashboard weekly overview metrics on mobile screen
+- FIXED footer right align
+
+Version 1.0, 12-03-2017
+- initial release

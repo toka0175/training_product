@@ -1,0 +1,378 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <title>MainPage</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+
+  <!-- JQVMap css -->
+  <link href="assets/plugins/jqvmap/jqvmap.min.css" rel="stylesheet" type="text/css" />
+
+  <!-- Slick css -->
+  <link href="assets/plugins/slick-carousel/slick.css" rel="stylesheet" type="text/css" />
+  <link href="assets/plugins/slick-carousel/slick-theme.css" rel="stylesheet" type="text/css" />
+
+  <!-- Chart.js css -->
+  <link href="assets/plugins/chart.js/Chart.min.css" rel="stylesheet" type="text/css" />
+
+  <!-- App css -->
+  <link href="assets/css/bootstrap-custom.min.css" rel="stylesheet" type="text/css" />
+  <link href="assets/css/app.min.css" rel="stylesheet" type="text/css" />
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet">
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="assets/images/favicon.png">
+</head>
+<body class="layout-topnav">
+  <!-- WRAPPER -->
+  <div id="wrapper">
+
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-light navbar-expand-sm d-block fixed-top">
+      <!-- top bar -->
+      <div class="top-bar justify-content-between d-none d-sm-flex">
+        <div class="navbar-brand">
+          <a href="index.html"><img src="assets/images/logo-white-small.png" alt="Klorofil Pro Logo" class="img-responsive logo"></a>
+        </div>
+        <form class="search-form">
+          <input type="text" value="" class="form-control" placeholder="Type keyword here...">
+          <button type="button" class="btn"><i class="fa fa-search"></i></button>
+        </form>
+      </div>
+      <!-- end top bar -->
+
+      <!-- main navigation -->
+      <div id="navbar-menu" class="bottom-bar">
+        <div class="navbar-header d-sm-none d-flex justify-content-between align-items-center px-4 py-2">
+          <div class="navbar-brand">
+            <a href="index.html"><img src="assets/images/logo-dark.png" alt="Klorofil Pro Logo" class="img-fluid logo"></a>
+          </div>
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main-nav">
+            <i class="ti-menu"></i>
+          </button>
+        </div>
+
+        <div class="navbar-collapse collapse justify-content-between" id="main-nav">
+          <ul class="nav navbar-nav">
+            <li class="nav-item dropdown">
+              <a href="index.html" class="nav-link dropdown-toggle" data-toggle="dropdown">
+                <i class="ti-dashboard"></i> <span>Dashboard</span> <i class="ti-angle-down icon-submenu"></i>
+              </a>
+              <ul class="dropdown-menu">
+                <li><a href="index.html">Dashboard v1</a></li>
+                <li><a href="dashboard2.html">Dashboard v2</a></li>
+                <li><a href="dashboard3.html">Dashboard v3</a></li>
+                <li><a href="dashboard4.html" class="active">Dashboard v4</a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a href="index.html" class="nav-link dropdown-toggle" data-toggle="dropdown">
+                <i class="ti-layout"></i> <span>Layouts</span> <i class="ti-angle-down icon-submenu"></i>
+              </a>
+              <ul class="dropdown-menu">
+                <li><a href="layout-topnav.html" class="">Top Navigation</a></li>
+                <li><a href="layout-minified.html">Layout Minified</a></li>
+                <li><a href="layout-fullwidth.html">Layout Fullwidth</a></li>
+                <li><a href="layout-default.html">Layout Default</a></li>
+                <li><a href="layout-grid.html">Grid</a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">
+                <i class="ti-menu"></i> <span>Multilevel Menu</span> <i class="ti-angle-down icon-submenu"></i>
+              </a>
+              <ul class="dropdown-menu">
+                <li class="dropdown dropdown-sub">
+                  <a href="#" data-toggle="dropdown">Submenu 1 <i class="icon-submenu ti-angle-right"></i></a>
+                  <ul class="dropdown-menu">
+                    <li class="dropdown-item"><a href="#">Another menu level</a></li>
+                    <li class="dropdown-item"><a href="#">Another menu level</a></li>
+                  </ul>
+                </li>
+                <li class="dropdown dropdown-sub">
+                  <a href="#" data-toggle="dropdown" class="active">Submenu 2 <i class="icon-submenu ti-angle-right"></i></a>
+                  <ul class="dropdown-menu">
+                    <li class="dropdown-item"><a href="#">Another menu level</a></li>
+                    <li class="dropdown-item"><a href="#" class="active">Another menu level</a></li>
+                    <li class="dropdown-item"><a href="#">Another menu level</a></li>
+                  </ul>
+                </li>
+                <li><a href="#">Submenu 3</a></li>
+              </ul>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="index.html"><i class="ti-back-left"></i> <span>Back to Default</span></a></li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li class="nav-item d-none d-lg-block">
+              <a href="#" class="dropdown-toggle btn-toggle-rightsidebar">
+                <i class="ti-layout-sidebar-right"></i>
+              </a>
+            </li>
+            <li class="nav-item dropdown d-none d-lg-block">
+              <a href="#" class="dropdown-toggle icon-menu" data-toggle="dropdown">
+                <i class="ti-bell"></i>
+                <span class="badge bg-danger">5</span>
+              </a>
+              <ul class="dropdown-menu dropdown-menu-right notifications">
+                <li class="dropdown-item">You have 5 new notifications</li>
+                <li class="dropdown-item">
+                  <a href="#" class="notification-item">
+                    <i class="fa fa-hdd-o custom-bg-red"></i>
+                    <p><span class="text">System space is almost full</span> <span class="timestamp">11 minutes ago</span></p>
+                  </a>
+                </li>
+                <li class="dropdown-item">
+                  <a href="#" class="notification-item">
+                    <i class="fa fa-tasks custom-bg-yellow"></i>
+                    <p><span class="text">You have 9 unfinished tasks</span> <span class="timestamp">20 minutes ago</span></p>
+                  </a>
+                </li>
+                <li class="dropdown-item">
+                  <a href="#" class="notification-item">
+                    <i class="fa fa-book custom-bg-green2"></i>
+                    <p><span class="text">Monthly report is available</span> <span class="timestamp">1 hour ago</span></p>
+                  </a>
+                </li>
+                <li class="dropdown-item">
+                  <a href="#" class="notification-item">
+                    <i class="fa fa-bullhorn custom-bg-purple"></i>
+                    <p><span class="text">Weekly meeting in 1 hour</span> <span class="timestamp">2 hours ago</span></p>
+                  </a>
+                </li>
+                <li class="dropdown-item d-none d-lg-block">
+                  <a href="#" class="notification-item">
+                    <i class="fa fa-check custom-bg-green"></i>
+                    <p><span class="text">Your request has been approved</span> <span class="timestamp">3 days ago</span></p>
+                  </a>
+                </li>
+                <li class="dropdown-item"><a href="#" class="more">See all notifications</a></li>
+              </ul>
+            </li>
+            <li class="dropdown d-none d-lg-block">
+              <a href="#" id="tour-help" class="dropdown-toggle" data-toggle="dropdown"><i class="ti-help"></i> <span class="sr-only">Help</span></a>
+              <ul class="dropdown-menu dropdown-menu-right">
+                <li><a href="#"><i class="ti-direction"></i> Basic Use</a></li>
+                <li><a href="#"><i class="ti-server"></i> Working With Data</a></li>
+                <li><a href="#"><i class="ti-lock"></i> Security</a></li>
+                <li><a href="#"><i class="ti-light-bulb"></i> Troubleshooting</a></li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown"><img src="https://i.imgur.com/M701HZb.jpg" class="user-picture"" alt="Avatar"> <span>Samuel</span></a>
+              <ul class="dropdown-menu dropdown-menu-right logged-user-menu">
+                <li><a href="#"><i class="ti-user"></i> <span>My Profile</span></a></li>
+                <li><a href="appviews-inbox.html"><i class="ti-email"></i> <span>Message</span></a></li>
+                <li><a href="#"><i class="ti-settings"></i> <span>Settings</span></a></li>
+                <li><a href="page-lockscreen.html"><i class="ti-power-off"></i> <span>Logout</span></a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <!-- end main navigation -->
+
+    </nav>
+    <!-- END NAVBAR -->
+
+    <!-- MAIN -->
+    <div class="main">
+
+      <!-- MAIN CONTENT -->
+      <div class="main-content">
+        <div class="container">
+          <div class="content-heading">
+            <div class="heading-left">
+              <h1 class="page-title">MAIN Page</h1>
+              <p class="page-subtitle">このページから、どこでも飛べるよ～</p>
+            </div>
+          </div>
+
+          <div class="row mt-5 ">
+            <div class="col-md-9">
+              <!-- METRICS -->
+              <div class="row">
+                <!-- Succulents Links Box -->
+                <div class="col-md-4">
+                  <div class="widget widget-metric_8">
+
+                    <div class="heading clearfix">
+                      <span class="title">Succulent</span>
+                      <div class="icons">
+                        <a href="#" class="toggle-dropdown" data-toggle="dropdown"><i class="fa fa-ellipsis-v"></i></a>
+                        <ul class="dropdown-menu dropdown-menu-right">
+                        </ul>
+                      </div>
+                    </div>
+
+                    <div class = "button Link">
+                        <button type = "button" class = "btn btn-primary btn-lg">Succulent Page</button>
+                    </div>
+                    <p class="info">多肉植物の登録や、持っている多肉の場所を設定</p>
+                    <p class = "info">href = "/MainPage/Succulent"</p>
+                  </div>
+                </div>
+
+                <!--Shelf Links Box-->
+                <div class="col-md-4">
+                  <div class="widget widget-metric_8">
+                    <div class="heading clearfix">
+                      <span class="title">Shelf</span>
+                      <div class="dropdown">
+                        <a href="#" class="toggle-dropdown" data-toggle="dropdown"><i class="fa fa-ellipsis-v"></i></a>
+                        <ul class="dropdown-menu dropdown-menu-right"></ul>
+                      </div>
+                    </div>
+
+                    <div class = "button Link">
+                        <button type = "button" class = "btn btn-primary btn-lg">Shelf Page</button>
+                    </div>
+                    <p class="info">庭にある棚の種類や段数の設定を行う</p>
+                    <p class = "info">href = "/MainPage/Shelf"</p>
+                    </div>
+                </div>
+
+                <!--Diary Links Box-->
+                <div class="col-md-4">
+                  <div class="widget widget-metric_8">
+                    <div class="heading clearfix">
+                      <span class="title">Dairy</span>
+                      <div class="dropdown">
+                        <a href="#" class="toggle-dropdown" data-toggle="dropdown"><i class="fa fa-ellipsis-v"></i></a>
+                        <ul class="dropdown-menu dropdown-menu-right">
+                        </ul>
+                      </div>
+                    </div>
+
+                    <div class = "button Link">
+                        <button type = "button" class = "btn btn-primary btn-lg">Diary Page</button>
+                    </div>
+                    <p class="info">日々の多肉植物の観察を日記に記そう！</p>
+                    <p class = "info">href = "/MainPage/Diary"</p>
+                    </div>
+                </div>
+              <!-- END METRICS -->
+
+              <!-- CAMPAIGN RESULT -->
+              <div class="card card-tab">
+                <div class="card-header">
+                  <h3 class="card-title">Diary Text</h3>
+                </div>
+                <div class="card-body">
+                  <div class="tab-content">
+                    <!-- tab 1 -->
+                    <div class="tab-pane fade show active" id="tab1">
+                      <div class="card-layout dashed-separator">
+
+                        <div class="card-cols-2">
+                            <div class = "card">
+                                <h3 class = "card-header">DiaryTitle1</h3>
+                                <div class = "card-body">
+                                    <img src="assets/images/profile-bg.png" style = "width:350px ; text-align: center;">
+                                    <hr class = "content-separate">
+                                    <p>text:<br>
+                                        道路交通騒音は心理的不快感や睡眠障害などの悪影響を人体に及ぼす可能性があり、その影響について十分に検討する必要がある。近年コンピュータの性能向上イン伴い、道路や防音壁の計画・設計には数値シミュレーションが数多く用いられている。...
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card-cols-2">
+                            <div class = "card">
+                                <h3 class = "card-header">DiaryTitle1</h3>
+                                <div class = "card-body">
+                                    <img src="assets/images/profile-bg.png" style = "width:350px">
+                                    <hr class = "content-separate">
+                                    <p>text:<br>
+                                        道路交通騒音は心理的不快感や睡眠障害などの悪影響を人体に及ぼす可能性があり、その影響について十分に検討する必要がある。近年コンピュータの性能向上イン伴い、道路や防音壁の計画・設計には数値シミュレーションが数多く用いられている。...
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                      </div>
+
+                    </div>
+                    <!-- end tab 1 -->
+                  </div>
+                </div>
+              </div>
+              <!-- END CAMPAIGN RESULT -->
+
+            <div class="col-md-3">
+              <div class="card">
+                <h3 class="card-header">Visit Duration</h3>
+                <div class="card-body py-0">
+                    <div style="height:700px">
+                        <table>
+                            <thead>
+                                <tr><th>多肉植物名</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>桃太郎</td></tr>
+                                <tr><td>アロエ</td></tr>
+                                <tr><td>エケベリア</td></tr>
+                                <tr><td>多肉植物A</td></tr>
+                                <tr><td>多肉植物B</td></tr>
+                                <tr><td>多肉植物C</td></tr>
+                                <tr><td>多肉植物D</td></tr>
+                                <tr><td>多肉植物E</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+              </div>
+            </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- END MAIN CONTENT -->
+    </div>
+    <!-- END MAIN -->
+
+    <div class="clearfix"></div>
+    
+    <!-- footer -->
+    <footer>
+      <div class="container-fluid">
+        <p class="copyright">&copy; 2020 <a href="https://www.themeineed.com" target="_blank">Theme I Need</a>. All Rights Reserved.</p>
+      </div>
+    </footer>
+    <!-- end footer -->
+
+  </div>
+  <!-- END WRAPPER -->
+
+  <!-- Vendor -->
+  <script src="assets/js/vendor.min.js"></script>
+
+  <!-- Plugins -->
+  <script src="assets/plugins/flot/jquery.canvaswrapper.js"></script>
+  <script src="assets/plugins/flot/jquery.colorhelpers.js"></script>
+  <script src="assets/plugins/flot/jquery.flot.js"></script>
+  <script src="assets/plugins/flot/jquery.flot.saturated.js"></script>
+  <script src="assets/plugins/flot/jquery.flot.browser.js"></script>
+  <script src="assets/plugins/flot/jquery.flot.drawSeries.js"></script>
+  <script src="assets/plugins/flot/jquery.flot.uiConstants.js"></script>
+  <script src="assets/plugins/flot/jquery.flot.resize.js"></script>
+  <script src="assets/plugins/flot/jquery.flot.legend.js"></script>
+  <script src="assets/plugins/flot/jquery.flot.hover.js"></script>
+  <script src="assets/plugins/flot/jquery.flot.time.js"></script>
+  <script src="assets/plugins/flot/jquery.flot.pie.js"></script>
+  <script src="assets/plugins/jquery-sparkline/jquery.sparkline.min.js"></script>
+  <script src="assets/plugins/jqvmap/jquery.vmap.min.js"></script>
+  <script src="assets/plugins/jqvmap/maps/jquery.vmap.world.js"></script>
+  <script src="assets/plugins/slick-carousel/slick.min.js"></script>
+  <script src="assets/plugins/chart.js/Chart.min.js"></script>
+
+  <!-- Init -->
+  <script src="assets/js/pages/dashboard4.init.js"></script>
+
+  <!-- App -->
+  <script src="assets/js/app.min.js"></script>
+</body>
+</html>

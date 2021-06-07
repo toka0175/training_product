@@ -1,0 +1,228 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <title>Sparkline Chart | Klorofil Pro - Bootstrap 4 Admin Dashboard Template</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+  <!-- App css -->
+  <link href="assets/css/bootstrap-custom.min.css" rel="stylesheet" type="text/css" />
+  <link href="assets/css/app.min.css" rel="stylesheet" type="text/css" />
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet">
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="assets/images/favicon.png">
+</head>
+<body>
+  <!-- WRAPPER -->
+  <div id="wrapper">
+
+    @@include('./partials/topbar.html')
+
+    @@include('./partials/left-sidebar.html', {"parentMenu": "charts", "activeMenu": "sparkline"})
+
+    <!-- MAIN -->
+    <div class="main">
+
+      <!-- MAIN CONTENT -->
+      <div class="main-content">
+
+        @@include('./partials/content-heading.html', {"title": "Sparkline Chart", "subtitle": "Small inline charts."})
+
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-md-6">
+              <!-- mini line charts -->
+              <div class="card">
+                <div class="card-header">
+                  <h3 class="card-title">Mini Line Chart</h3>
+                </div>
+                <div class="card-body">
+                  <p>Mouse over the chart to see the tooltip</p>
+                  <span class="inlinesparkline mr-3" id="demo-sparkline-line1">26,68,35,38,53,95,114,87,114</span>
+                  <span class="inlinesparkline mr-3" id="demo-sparkline-line2">9,43,50,36,95,41,69,113,50</span>
+                  <span class="inlinesparkline mr-3" id="demo-sparkline-line3">5,43,66,73,50,102,40,92,59</span>
+                  <span class="inlinesparkline mr-3" id="demo-sparkline-line4">14,89,16,35,63,63,64,124,100</span>
+                  <span class="inlinesparkline" id="demo-sparkline-line5">38,13,36,62,98,48,93,60,75</span>
+
+                  <br/><br/>
+
+                  <span class="inlinesparkline mr-3" id="demo-sparkline-line6">Loading...</span>
+                  <span class="inlinesparkline mr-3" id="demo-sparkline-line7">Loading...</span>
+                  <span class="inlinesparkline mr-3" id="demo-sparkline-line8">Loading...</span>
+                  <span class="inlinesparkline mr-3" id="demo-sparkline-line9">Loading...</span>
+                  <span class="inlinesparkline mr-3" id="demo-sparkline-line10">Loading...</span>
+
+                  <br/><br/>
+
+                  <p>Composite Inline</p>
+					        <span id="demo-sparkline-compositeline">8,4,0,0,0,0,1,4,4,10,10,10,10,0,0,0,4,6,5,9,10</span>
+
+                </div>
+              </div>
+              <!-- end mini line charts -->
+
+              <!-- mini bar charts -->
+              <div class="card">
+                <div class="card-header">
+                  <h3 class="card-title">Mini Bar Charts</h3>
+                </div>
+                <div class="card-body">
+                  <span id="mini-bar-chart1" class="mini-bar-chart mr-3"></span>
+                  <span id="mini-bar-chart2" class="mini-bar-chart mr-3"></span>
+                  <span id="mini-bar-chart3" class="mini-bar-chart mr-3"></span>
+                  <span id="mini-bar-chart4" class="mini-bar-chart mr-3"></span>
+                  <span id="mini-bar-chart5" class="mini-bar-chart"></span>
+
+                  <br/><br/>
+
+                  <div class="row">
+                    <div class="col-md-4">
+                      <p>Negative values</p>
+                      <span id="mini-bar-negative" class="mini-bar-chart">25, -10, 15, 35, -15, -5, 10, 20, 15</span>
+                    </div>
+                    <div class="col-md-4">
+                      <p>Stacked</p>
+                      <span id="mini-bar-stacked" class="mini-bar-chart">2:4, 5:7, 2:9, 4:8, 3:10, 4:10, 3:6, 5:8, 2:3</span>
+                    </div>
+                    <div class="col-md-4">
+                      <p>Composite Bar</p>
+                      <span id="demo-sparkline-compositebar">4,6,7,7,4,3,2,1,4</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- end mini bar charts -->
+
+              <!-- mini pie charts -->
+              <div class="card">
+                <div class="card-header">
+                  <h3 class="card-title">Mini Pie Charts</h3>
+                </div>
+                <div class="card-body">
+                  <span id="mini-pie-chart1" class="mr-3">30, 15, 55</span>
+                  <span id="mini-pie-chart2" class="mr-3">65, 25, 10</span>
+                  <span id="mini-pie-chart3">70, 30</span>
+                </div>
+              </div>
+              <!-- end mini pie charts -->
+            </div>
+            <div class="col-md-6">
+              <!-- simple stats -->
+              <div class="card">
+                <div class="card-header">
+                  <h3 class="card-title">Simple Stats</h3>
+                </div>
+                <div class="card-body">
+                  <!-- sparkline stat medium -->
+                  <div class="row">
+                    <div class="col-md-6">
+                      <div class="sparkline-stat-medium">
+                        <div class="info"><span>Visits</span><strong>1,363</strong></div>
+                        <span id="sparkline-stat1" class="inlinesparkline">Loading...</span>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="sparkline-stat-medium">
+                        <div class="info"><span>Unique Visitors</span><strong>1,221</strong></div>
+                        <span id="sparkline-stat2" class="inlinesparkline">Loading...</span>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="sparkline-stat-medium">
+                        <div class="info"><span>Page Views</span><strong>2,300</strong></div>
+                        <span id="sparkline-stat3" class="inlinesparkline">Loading...</span>
+                      </div>
+                    </div>
+        
+                    <div class="col-md-6">
+                      <div class="sparkline-stat-medium">
+                        <div class="info"><span>Pages/Visit</span><strong>1.19</strong></div>
+                        <span id="sparkline-stat4" class="inlinesparkline">Loading...</span>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="sparkline-stat-medium">
+                        <div class="info"><span>Avg. Visit Duration</span><strong>00:00:30</strong></div>
+                        <span id="sparkline-stat5" class="inlinesparkline">Loading...</span>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="sparkline-stat-medium">
+                        <div class="info"><span>% New Visits</span><strong>28.35%</strong></div>
+                        <span id="sparkline-stat6" class="inlinesparkline">Loading...</span>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- end sparkline stat medium -->
+
+                  <!-- sparkline stat big -->
+                  <div class="sparkline-stat-big clearfix">
+                    <div class="summary">
+                      <span class="big-number">260</span>
+                      <span class="text-right">New Orders<br>3% <i class="fa fa-caret-up"></i></span>
+                    </div>
+                    <div id="sparkline-stat-big1" class="inlinesparkline">340, 837, 645, 393, 412, 324, 465, 643, 987</div>
+                  </div>
+                  <!-- end sparkline stat big -->
+
+                  <br/><br/>
+
+                  <!-- mini bar stat -->
+                  <div class="row">
+                    <div class="col-md-4">
+                      <div class="sparkbar-stat-item">
+                        <span>LIKES <span class="stat-value"><br><i class="fa fa-plus-circle"></i> 81,450</span></span>
+                        <span id="sparkbar-chart1" class="mini-bar-chart"></span>
+                      </div>
+                    </div>
+                    <div class="col-md-4">
+                      <div class="sparkbar-stat-item">
+                        <span>SUBSCRIBERS <span class="stat-value"><br><i class="fa fa-plus-circle"></i> 211,530</span></span>
+                        <span id="sparkbar-chart2" class="mini-bar-chart"></span>
+                      </div>
+                    </div>
+                    <div class="col-md-4">
+                      <div class="sparkbar-stat-item">
+                        <span>CUSTOMERS <span class="stat-value"><br><i class="fa fa-plus-circle"></i> 64,957</span></span>
+                        <span id="sparkbar-chart3" class="mini-bar-chart"></span>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- end mini bar stat -->
+                </div>
+              </div>
+              <!-- end simple stats -->
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- END MAIN CONTENT -->
+
+      @@include('./partials/right-sidebar.html')
+
+    </div>
+    <!-- END MAIN -->
+
+    <div class="clearfix"></div>
+    
+    @@include('./partials/footer.html')
+
+  </div>
+  <!-- END WRAPPER -->
+
+  <!-- Vendor -->
+  <script src="assets/js/vendor.min.js"></script>
+
+  <!-- Sparkline Chart Plugin -->
+  <script src="assets/plugins/jquery-sparkline/jquery.sparkline.min.js"></script>
+
+  <!-- Sparkline Chart Init -->
+  <script src="assets/js/pages/charts-sparkline.init.min.js"></script>
+
+  <!-- App -->
+  <script src="assets/js/app.min.js"></script>
+</body>
+</html>

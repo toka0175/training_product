@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <title>Text Editor | Klorofil Pro - Bootstrap 4 Admin Dashboard Template</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+  <!-- Summernote css -->
+  <link href="assets/plugins/summernote/summernote-bs4.css" rel="stylesheet" type="text/css" />
+
+  <!-- Bootstrap Markdown css -->
+  <link href="assets/plugins/bootstrap-markdown/bootstrap-markdown.min.css" rel="stylesheet" type="text/css" />
+
+  <!-- App css -->
+  <link href="assets/css/bootstrap-custom.min.css" rel="stylesheet" type="text/css" />
+  <link href="assets/css/app.min.css" rel="stylesheet" type="text/css" />
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet">
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="assets/images/favicon.png">
+</head>
+<body>
+  <!-- WRAPPER -->
+  <div id="wrapper">
+
+    @@include('./partials/topbar.html')
+
+    @@include('./partials/left-sidebar.html', {"parentMenu": "forms", "activeMenu": "text-editors"})
+
+    <!-- MAIN -->
+    <div class="main">
+
+      <!-- MAIN CONTENT -->
+      <div class="main-content">
+
+        @@include('./partials/content-heading.html', {"title": "Text Editor", "subtitle": "WYSIWYG and markdown editor."})
+
+        <div class="container-fluid">
+          <h4 class="h5">Summernote</h4>
+          <p class="mb-4">Super Simple WYSIWYG Editor on Bootstrap</p>
+        
+          <div class="summernote">Hello there,<br/>
+            <p>The toolbar can be customized and it also supports various callbacks such as <code>onInit</code>, <code>onFocus</code>, <code>onPaste</code> and many more.</p>
+            <p>Please try <b>paste some texts</b> here</p>
+          </div>
+
+          <h4 class="h5">Markdown Editor</h4>
+	        <p class="mb-4">Markdown editing meet Bootstrap</p>
+
+	        <textarea id="markdown-editor" name="markdown-content" data-provide="markdown" data-iconlibrary="fa" rows="10"></textarea>
+          
+        </div>
+      </div>
+      <!-- END MAIN CONTENT -->
+
+      @@include('./partials/right-sidebar.html')
+
+    </div>
+    <!-- END MAIN -->
+
+    <div class="clearfix"></div>
+    
+    @@include('./partials/footer.html')
+
+  </div>
+  <!-- END WRAPPER -->
+
+  <!-- Vendor -->
+  <script src="assets/js/vendor.min.js"></script>
+
+  <!-- Summernote Plugin -->
+  <script src="assets/plugins/summernote/summernote-bs4.min.js"></script>
+
+  <!-- Markdown Plugins -->
+  <script src="assets/plugins/markdown/markdown.js"></script>
+  <script src="assets/plugins/to-markdown/to-markdown.js"></script>
+
+  <!-- Bootstrap Markdown Plugin -->
+  <script src="assets/plugins/bootstrap-markdown/bootstrap-markdown.js"></script>
+
+  <!-- Text Editor Init -->
+  <script src="assets/js/pages/forms-texteditor.init.min.js"></script>
+
+  <!-- App -->
+  <script src="assets/js/app.min.js"></script>
+</body>
+</html>

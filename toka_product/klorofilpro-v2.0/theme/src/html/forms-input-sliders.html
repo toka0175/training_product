@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <title>Input Sliders | Klorofil Pro - Bootstrap 4 Admin Dashboard Template</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+
+  <!-- Nouislider css -->
+  <link href="assets/plugins/nouislider/nouislider.min.css" rel="stylesheet" type="text/css" />
+
+  <!-- Bootstrap Slider css -->
+  <link href="assets/plugins/bootstrap-slider/bootstrap-slider.min.css" rel="stylesheet" type="text/css" />
+
+  <!-- App css -->
+  <link href="assets/css/bootstrap-custom.min.css" rel="stylesheet" type="text/css" />
+  <link href="assets/css/app.min.css" rel="stylesheet" type="text/css" />
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet">
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="assets/images/favicon.png">
+</head>
+<body>
+  <!-- WRAPPER -->
+  <div id="wrapper">
+
+    @@include('./partials/topbar.html')
+
+    @@include('./partials/left-sidebar.html', {"parentMenu": "forms", "activeMenu": "input-sliders"})
+
+    <!-- MAIN -->
+    <div class="main">
+
+      <!-- MAIN CONTENT -->
+      <div class="main-content">
+
+        @@include('./partials/content-heading.html', {"title": "Input Sliders", "subtitle": "Input slider, range input slider, stepped input slider."})
+
+        <div class="container-fluid">
+          <!-- input slider by nouislider -->
+          <div class="card">
+            <div class="card-header">Input Slider <small>by <a href="https://refreshless.com/nouislider/">noUiSlider</a></small></div>
+              <div class="card-body">
+                <div class="row">
+                  <div class="col-md-6">
+                    <div id="nouislider1"></div><br>
+                    <span>Provide number between 0 to 1000 then hit enter</span>
+                    <input id="input-nouislider1" class="form-control w-50">
+                    <br><br><br>
+      
+                    <div id="nouislider2"></div><br>
+                    <span>Provide number between 2.000 to 50.000 then hit enter, you can ignore '$' sign</span><br>
+                    <input id="input-nouislider2" class="form-control w-50">
+                    <br><br><br><br>
+      
+                    <span>Range slider with tooltips</span><br><br><br>
+                    <div id="nouislider3"></div>
+                    <br><br>
+                  </div>
+                  <div class="col-md-6">
+                    <span>Slider with step</span><br><br>
+                    <div id="nouislider4"></div>
+                    <br><br>
+      
+                    <span>Draggable range, drag the green area</span><br><br>
+                    <div id="nouislider5"></div>
+                    <br><br>
+      
+                    <span>Fixed draggable range with fixed handles</span><br><br>
+                    <div id="nouislider6"></div>
+                    <br><br>
+      
+                    <span>Default, basic slider</span><br><br>
+                    <div id="nouislider7"></div>
+                  </div>
+                </div>
+              </div>
+          </div>
+          <!-- end input slider by nouislider -->
+
+          <!-- input slider by bootstrap slider -->
+          <div class="row">
+            <div class="col-md-6">
+              <div class="card">
+                <div class="card-header">Input Slider <small>by <a href="http://www.eyecon.ro/bootstrap-slider/">Bootstrap Slider</a></small></div>
+                <div class="card-body">
+                  <div class="d-flex">
+                    <input type="text" class="bootstrap-slider" value="">
+                    <span class="label-slider ml-2"></span>
+                  </div>
+                  <input type="text" class="bootstrap-slider-step" value="">
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- end input slider by bootstrap slider -->
+        </div>
+      </div>
+      <!-- END MAIN CONTENT -->
+
+      @@include('./partials/right-sidebar.html')
+
+    </div>
+    <!-- END MAIN -->
+
+    <div class="clearfix"></div>
+    
+    @@include('./partials/footer.html')
+
+  </div>
+  <!-- END WRAPPER -->
+
+  <!-- Vendor -->
+  <script src="assets/js/vendor.min.js"></script>
+
+  <!-- Nouislider Plugin -->
+  <script src="assets/plugins/nouislider/wNumb.js"></script>
+  <script src="assets/plugins/nouislider/nouislider.min.js"></script>
+
+  <!-- Bootstrap Slider Plugin -->
+  <script src="assets/plugins/bootstrap-slider/bootstrap-slider.min.js"></script>
+
+  <!-- Input Sliders Init -->
+  <script src="assets/js/pages/forms-input-sliders.init.min.js"></script>
+
+  <!-- App -->
+  <script src="assets/js/app.min.js"></script>
+</body>
+</html>

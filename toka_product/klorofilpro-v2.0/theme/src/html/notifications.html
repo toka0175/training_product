@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <title>Notifications | Klorofil Pro - Bootstrap 4 Admin Dashboard Template</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+  <!-- Notifications css -->
+  <link href="assets/plugins/toastr/toastr.min.css" rel="stylesheet" type="text/css" />
+
+  <!-- App css -->
+  <link href="assets/css/bootstrap-custom.min.css" rel="stylesheet" type="text/css" />
+  <link href="assets/css/app.min.css" rel="stylesheet" type="text/css" />
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet">
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="assets/images/favicon.png">
+</head>
+<body>
+  <!-- WRAPPER -->
+  <div id="wrapper">
+
+    @@include('./partials/topbar.html')
+
+    @@include('./partials/left-sidebar.html', {"parentMenu": "", "activeMenu": "notifications"})
+
+    <!-- MAIN -->
+    <div class="main">
+
+      <!-- MAIN CONTENT -->
+      <div class="main-content">
+
+        @@include('./partials/content-heading.html', {"title": "Notifications", "subtitle": "Customizable and stylish Gnome/Growl type non-blocking notifications."})
+
+        <div class="container-fluid">
+          <!-- toastr plugin -->
+          <div class="card">
+            <h3 class="card-header">Toastr by 3rd-party plugin</h3>
+            <div class="card-body">
+              <!-- CONTEXTUAL -->
+              <h4 class="h5">Contextual</h4>
+              <p class="demo-button">
+                <button type="button" class="btn btn-primary btn-toastr" data-context="info" data-message="This is general theme info" data-position="top-right">General Info</button>
+                <button type="button" class="btn btn-success btn-toastr" data-context="success" data-message="This is success info" data-position="top-right">Success Info</button>
+                <button type="button" class="btn btn-warning btn-toastr" data-context="warning" data-message="This is warning info" data-position="top-right">Warning Info</button>
+                <button type="button" class="btn btn-danger btn-toastr" data-context="error" data-message="This is error info" data-position="top-right">Error Info</button>
+              </p>
+              <!-- END CONTEXTUAL -->
+
+              <br/>
+
+              <!-- POSITION -->
+              <h4 class="h5">Position</h4>
+              <p class="demo-button">
+                <button type="button" class="btn btn-outline-light btn-toastr" data-context="info" data-message="Hi, I'm here" data-position="bottom-right">Bottom Right</button>
+                <button type="button" class="btn btn-outline-light btn-toastr" data-context="info" data-message="Hi, I'm here" data-position="bottom-left">Bottom Left</button>
+                <button type="button" class="btn btn-outline-light btn-toastr" data-context="info" data-message="Hi, I'm here" data-position="top-left">Top Left</button>
+                <button type="button" class="btn btn-outline-light btn-toastr" data-context="info" data-message="Hi, I'm here" data-position="top-right">Top Right</button>
+                <button type="button" class="btn btn-outline-light btn-toastr" data-context="info" data-message="Hi, I'm here" data-position="top-full-width">Top Full Width</button>
+                <button type="button" class="btn btn-outline-light btn-toastr" data-context="info" data-message="Hi, I'm here" data-position="bottom-full-width">Bottom Full Width</button>
+                <button type="button" class="btn btn-outline-light btn-toastr" data-context="info" data-message="Hi, I'm here" data-position="top-center">Top Center</button>
+                <button type="button" class="btn btn-outline-light btn-toastr" data-context="info" data-message="Hi, I'm here" data-position="bottom-center">Bottom Center</button>
+              </p>
+              <!-- END POSITION -->
+
+              <br/>
+
+              <!-- CALLBACK -->
+              <h4 class="h5">Callback</h4>
+              <p class="demo-button">
+                <button type="button" class="btn btn-outline-light btn-toastr-callback" id="toastr-callback1" data-context="info" data-message="onShown and onHidden callback demo">onShown and onHidden</button>
+                <button type="button" class="btn btn-outline-light btn-toastr-callback" id="toastr-callback2" data-context="info" data-message="Please click me">onclick</button>
+                <button type="button" class="btn btn-outline-light btn-toastr-callback" id="toastr-callback3" data-context="info" data-message="Please click close button">onCloseClick</button>
+              </p>
+              <!-- END CALLBACK -->
+            </div>
+          </div>
+          <!-- end toastr plugin -->
+
+          <!-- toastr bootstrap -->
+          <div class="card">
+            <h3 class="card-header">Toastr by Bootstrap 4</h3>
+            <div class="card-body">
+              <p class="text-muted">It needs to be positioned manually using absolute position and it will placed within its container with relative position.</p>
+              <button type="button" class="btn btn-outline-light" id="btn-basic">Basic</button>
+              <button type="button" class="btn btn-outline-light" id="btn-autohide">No Auto Hide</button>
+              <button type="button" class="btn btn-outline-light" id="btn-hasimage">Has Image</button>
+
+              <div style="position: absolute; top: 0; right: 0;">
+                <div id="toastr-bs-basic" class="toast" role="alert">
+                  <div class="toast-header">
+                    <strong class="mr-auto">Bootstrap</strong>
+                    <small>11 mins ago</small>
+                    <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="toast-body">
+                    Hello, world! This is a toast message.
+                  </div>
+                </div>
+
+                <div id="toastr-bs-autohide" class="toast" data-autohide="false" role="alert">
+                  <div class="toast-header">
+                    <strong class="mr-auto">Bootstrap</strong>
+                    <small>11 mins ago</small>
+                    <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="toast-body">
+                    Hello, world! This is a toast message.
+                  </div>
+                </div>
+
+                <div id="toastr-bs-hasimage" class="toast" data-delay="1000" role="alert">
+                  <div class="toast-header">
+                    <img src="https://i.imgur.com/M701HZb.jpg" width="20" class="rounded mr-2" alt="">
+                    <strong class="mr-auto">John Doe</strong>
+                    <small>11 mins ago</small>
+                    <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="toast-body">
+                    Hello, world! This is a toast message.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- end toastr bootstrap -->
+        </div>
+      </div>
+      <!-- END MAIN CONTENT -->
+
+      @@include('./partials/right-sidebar.html')
+
+    </div>
+    <!-- END MAIN -->
+
+    <div class="clearfix"></div>
+    
+    @@include('./partials/footer.html')
+
+  </div>
+  <!-- END WRAPPER -->
+
+  <!-- Vendor -->
+  <script src="assets/js/vendor.min.js"></script>
+
+  <!-- Notifications Plugin -->
+  <script src="assets/plugins/toastr/toastr.min.js"></script>
+
+  <!-- Notifications Init -->
+  <script src="assets/js/pages/notifications.init.js"></script>
+
+  <!-- App -->
+  <script src="assets/js/app.min.js"></script>
+</body>
+</html>

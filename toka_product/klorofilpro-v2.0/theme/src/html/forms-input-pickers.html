@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <title>Input Pickers | Klorofil Pro - Bootstrap 4 Admin Dashboard Template</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+
+  <!-- Datepicker css -->
+  <link href="assets/plugins/bootstrap-datepicker/bootstrap-datepicker3.min.css" rel="stylesheet" type="text/css" />
+
+  <!-- Colorpicker css -->
+  <link href="assets/plugins/bootstrap-colorpicker/bootstrap-colorpicker.min.css" rel="stylesheet" type="text/css" />
+
+  <!-- Clock Picker css -->
+  <link href="assets/plugins/clockpicker/bootstrap-clockpicker.min.css" rel="stylesheet" type="text/css" />
+
+  <!-- App css -->
+  <link href="assets/css/bootstrap-custom.min.css" rel="stylesheet" type="text/css" />
+  <link href="assets/css/app.min.css" rel="stylesheet" type="text/css" />
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet">
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="assets/images/favicon.png">
+</head>
+<body>
+  <!-- WRAPPER -->
+  <div id="wrapper">
+
+    @@include('./partials/topbar.html')
+
+    @@include('./partials/left-sidebar.html', {"parentMenu": "forms", "activeMenu": "input-pickers"})
+
+    <!-- MAIN -->
+    <div class="main">
+
+      <!-- MAIN CONTENT -->
+      <div class="main-content">
+
+        @@include('./partials/content-heading.html', {"title": "Input Pickers", "subtitle": "Datepicker, color picker, time picker."})
+
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-md-6">
+              <div class="card">
+                <div class="card-header">Datepicker</div>
+                <div class="card-body">
+                  <label>Default</label><br>
+                  <input data-provide="datepicker" data-date-autoclose="true" class="form-control">
+                  <br><br>
+        
+                  <label>Custom Format (dd/mm/yyyy)</label><br>
+                  <input data-provide="datepicker" data-date-autoclose="true" class="form-control" data-date-format="dd/mm/yyyy">
+                  <br><br>
+        
+                  <label>With Component</label><br>
+                  <div class="input-group date" data-date-autoclose="true" data-provide="datepicker">
+                    <input type="text" class="form-control">
+                    <div class="input-group-append">
+                      <span class="input-group-text">
+                        <i class="fa fa-calendar"></i>
+                      </span>
+                    </div>
+                  </div>
+                  <br><br>
+        
+                  <label>Range</label><br>
+                  <div class="input-daterange input-group" data-provide="datepicker">
+                    <input type="text" class="form-control" name="start">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text">to</span>
+                    </div>
+                    <input type="text" class="form-control" name="end">
+                  </div>
+                  <br><br>
+        
+                  <label>Inline</label><br>
+                  <div class="inline-datepicker"></div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="card">
+                <div class="card-header">Color Picker</div>
+                <div class="card-body">
+                  <label>Attached to Field</label><br>
+                  <input type="text" id="demo-colorpicker1" class="form-control" value="#5367ce">
+                  <br><br>
+        
+                  <label>RGBA Format</label><br>
+                  <input type="text" id="demo-colorpicker2" class="form-control" value="rgba(182,225,12,0.49)">
+                  <br><br>
+        
+                  <label>As a Component</label><br>
+                  <div id="demo-colorpicker3" class="input-group colorpicker-component">
+                    <input type="text" value="#0099aa" class="form-control">
+                    <div class="input-group-append">
+                      <span class="input-group-text colorpicker-input-addon"><i></i></span>
+                    </div>
+                  </div><br>
+                  <div id="demo-colorpicker32" class="input-group colorpicker-component">
+                    <div class="input-group-append">
+                      <span class="input-group-text colorpicker-input-addon"><i></i></span>
+                    </div>
+                    <input type="text" value="#22ffaa" class="form-control">
+                  </div>
+                  <br><br>
+        
+                  <label>Has Color Palette</label><br>
+                  <div id="demo-colorpicker4" class="input-group colorpicker-component">
+                    <input type="text" value="#337ab7" class="form-control">
+                    <span class="input-group-addon"><i></i></span> 
+                  </div>
+                  <br><br>
+        
+                  <label>Inline Mode</label><br>
+                  <div id="colorpicker-inline"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header">Clock Picker</div>
+            <div class="card-body">
+              <div class="row">
+                <div class="col-md-4">
+                  <p>Default</p>
+                  <div class="input-group basic-clockpicker">
+                    <input type="text" class="form-control" value="09:30">
+                    <div class="input-group-append">
+                      <span class="input-group-text"><i class="fa fa-clock-o"></i></span>
+                    </div>
+                  </div>
+        
+                  <br><br>
+        
+                  <p>No Input Add-on</p>
+                  <input class="form-control basic-clockpicker" data-placement="right" value="9:30">
+        
+                  <br><br>
+        
+                  <p>Top Placement and Autoclose</p>
+                  <div class="input-group basic-clockpicker" data-placement="top" data-autoclose="true">
+                    <input type="text" class="form-control" value="09:30">
+                    <div class="input-group-append">
+                      <span class="input-group-text"><i class="fa fa-clock-o"></i></span>
+                    </div>
+                  </div>
+        
+                  <br><br>
+        
+                  <p>Default to NOW and manual operation</p>
+                  <div class="input-group">
+                    <input class="form-control" id="single-input" value="" placeholder="Now">
+                    <div class="input-group-append">
+                      <button class="btn btn-primary" type="button" id="check-minutes">Check the minutes</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+      </div>
+      <!-- END MAIN CONTENT -->
+
+      @@include('./partials/right-sidebar.html')
+
+    </div>
+    <!-- END MAIN -->
+
+    <div class="clearfix"></div>
+    
+    @@include('./partials/footer.html')
+
+  </div>
+  <!-- END WRAPPER -->
+
+  <!-- Vendor -->
+  <script src="assets/js/vendor.min.js"></script>
+
+  <!-- Datepicker Plugin -->
+  <script src="assets/plugins/bootstrap-datepicker/bootstrap-datepicker.min.js"></script>
+
+  <!-- Colorpicker Plugin -->
+  <script src="assets/plugins/bootstrap-colorpicker/bootstrap-colorpicker.min.js"></script>
+
+  <!-- Clock Picker Plugin -->
+  <script src="assets/plugins/clockpicker/bootstrap-clockpicker.min.js"></script>
+
+  <!-- Input Pickers Init -->
+  <script src="assets/js/pages/forms-input-pickers.init.js"></script>
+
+  <!-- App -->
+  <script src="assets/js/app.min.js"></script>
+</body>
+</html>

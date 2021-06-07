@@ -1,0 +1,498 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <title>Dynamic Tables | Klorofil Pro - Bootstrap 4 Admin Dashboard Template</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+  <!-- Datatables core css -->
+  <link href="assets/plugins/datatables.net-bs4/dataTables.bootstrap4.min.css" rel="stylesheet" type="text/css" />
+
+  <!-- Datatables extensions css -->
+  <link href="assets/plugins/datatables.net-buttons-bs4/buttons.bootstrap4.min.css" rel="stylesheet" type="text/css" />
+  <link href="assets/plugins/datatables.net-colreorder-bs4/colreorder.bootstrap4.min.css" rel="stylesheet" type="text/css" />
+
+  <!-- App css -->
+  <link href="assets/css/bootstrap-custom.min.css" rel="stylesheet" type="text/css" />
+  <link href="assets/css/app.min.css" rel="stylesheet" type="text/css" />
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet">
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="assets/images/favicon.png">
+</head>
+<body>
+  <!-- WRAPPER -->
+  <div id="wrapper">
+
+    @@include('./partials/topbar.html')
+
+    @@include('./partials/left-sidebar.html', {"parentMenu": "tables", "activeMenu": "dynamic"})
+
+    <!-- MAIN -->
+    <div class="main">
+
+      <!-- MAIN CONTENT -->
+      <div class="main-content">
+
+        @@include('./partials/content-heading.html', {"title": "Dynamic Tables", "subtitle": "Tables with powerful features such as sorting, drag and drop column, filter and more."})
+
+        <div class="container-fluid">
+          <!-- DRAG/DROP COLUMNS REORDER -->
+          <div class="card">
+            <div class="card-header">
+              <h3 class="card-title">Drag/Drop Column Reorder</h3>
+            </div>
+            <div class="card-body">
+              <p class="alert alert-info"><i class="fa fa-info-circle"></i> Try drag and drop the column to another position to reorder table columns.</p>
+              <div class="table-responsive">
+                <table id="datatable-column-reorder" class="table table-hover table-bordered">
+                  <thead class="thead-light">
+                    <tr>
+                      <th>Browser</th>
+                      <th>Operating System</th>
+                      <th>Visits</th>
+                      <th>New Visits</th>
+                      <th>Bounce Rate</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Chrome</td>
+                      <td>Macintosh</td>
+                      <td>360</td>
+                      <td>82.78%</td>
+                      <td>87.77%</td>
+                    </tr>
+                    <tr>
+                      <td>Chrome</td>
+                      <td>Windows</td>
+                      <td>582</td>
+                      <td>87.24%</td>
+                      <td>90.12%</td>
+                    </tr>
+                    <tr>
+                      <td>Chrome</td>
+                      <td>Linux</td>
+                      <td>172</td>
+                      <td>45.21%</td>
+                      <td>48.81%</td>
+                    </tr>
+                    <tr>
+                      <td>Chrome</td>
+                      <td>iOS</td>
+                      <td>86</td>
+                      <td>35.23%</td>
+                      <td>44.21%</td>
+                    </tr>
+                    <tr>
+                      <td>Firefox</td>
+                      <td>Windows</td>
+                      <td>280</td>
+                      <td>63.12%</td>
+                      <td>89.34%</td>
+                    </tr>
+                    <tr>
+                      <td>Firefox</td>
+                      <td>Android</td>
+                      <td>236</td>
+                      <td>58.02%</td>
+                      <td>76.19%</td>
+                    </tr>
+                    <tr>
+                      <td>Internet Explorer</td>
+                      <td>Windows</td>
+                      <td>145</td>
+                      <td>45.23%</td>
+                      <td>94.65%</td>
+                    </tr>
+                    <tr>
+                      <td>Opera</td>
+                      <td>Windows</td>
+                      <td>328</td>
+                      <td>67.12%</td>
+                      <td>78.34%</td>
+                    </tr>
+                    <tr>
+                      <td>Opera</td>
+                      <td>Macintosh</td>
+                      <td>22</td>
+                      <td>87.21%</td>
+                      <td>79.81%</td>
+                    </tr>
+                    <tr>
+                      <td>Chrome</td>
+                      <td>iOS</td>
+                      <td>45</td>
+                      <td>23.21%</td>
+                      <td>34.67%</td>
+                    </tr>
+                    <tr>
+                      <td>Chrome</td>
+                      <td>Linux</td>
+                      <td>142</td>
+                      <td>46.61%</td>
+                      <td>49.72%</td>
+                    </tr>
+                    <tr>
+                      <td>Chrome</td>
+                      <td>iOS</td>
+                      <td>96</td>
+                      <td>45.43%</td>
+                      <td>46.11%</td>
+                    </tr>
+                    <tr>
+                      <td>Firefox</td>
+                      <td>Windows</td>
+                      <td>235</td>
+                      <td>23.42%</td>
+                      <td>77.44%</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+          <!-- END DRAG/DROP COLUMNS REORDER -->
+
+          <!-- FILTER COLUMN -->
+          <div class="card">
+            <div class="card-header">
+              <h3 class="card-title">Column Filter Enabled</h3>
+            </div>
+            <div class="card-body">
+              <div class="table-responsive">
+                <table id="datatable-column-filter" class="table">
+                  <thead class="thead-light">
+                    <tr>
+                      <th>Browser</th>
+                      <th>Operating System</th>
+                      <th>Visits</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Chrome</td>
+                      <td>Macintosh</td>
+                      <td>500</td>
+                    </tr>
+                    <tr>
+                      <td>Firefox</td>
+                      <td>Windows</td>
+                      <td>600</td>
+                    </tr>
+                    <tr>
+                      <td>Edge</td>
+                      <td>Windows</td>
+                      <td>700</td>
+                    </tr>
+                    <tr>
+                      <td>Safari</td>
+                      <td>iOS</td>
+                      <td>300</td>
+                    </tr>
+                    <tr>
+                      <td>Safari</td>
+                      <td>Macintosh</td>
+                      <td>400</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+          <!-- END FILTER COLUMN -->
+
+          <!-- DATATABLE EXPORT -->
+          <div class="card">
+            <div class="card-header">
+              <h3 class="card-title">Datatable with Export Features</h3>
+            </div>
+            <div class="card-body">
+              <div class="table-responsive">
+                <table id="datatable-export" class="table table-striped">
+                  <thead class="thead-light">
+                    <tr>
+                      <th>Browser</th>
+                      <th>Operating System</th>
+                      <th>Visits</th>
+                      <th>New Visits</th>
+                      <th>Bounce Rate</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Chrome</td>
+                      <td>Macintosh</td>
+                      <td>360</td>
+                      <td>82.78%</td>
+                      <td>87.77%</td>
+                    </tr>
+                    <tr>
+                      <td>Chrome</td>
+                      <td>Windows</td>
+                      <td>582</td>
+                      <td>87.24%</td>
+                      <td>90.12%</td>
+                    </tr>
+                    <tr>
+                      <td>Chrome</td>
+                      <td>Linux</td>
+                      <td>172</td>
+                      <td>45.21%</td>
+                      <td>48.81%</td>
+                    </tr>
+                    <tr>
+                      <td>Chrome</td>
+                      <td>iOS</td>
+                      <td>86</td>
+                      <td>35.23%</td>
+                      <td>44.21%</td>
+                    </tr>
+                    <tr>
+                      <td>Firefox</td>
+                      <td>Windows</td>
+                      <td>280</td>
+                      <td>63.12%</td>
+                      <td>89.34%</td>
+                    </tr>
+                    <tr>
+                      <td>Firefox</td>
+                      <td>Android</td>
+                      <td>236</td>
+                      <td>58.02%</td>
+                      <td>76.19%</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+          <!-- END DATATABLE EXPORT -->
+
+          <!-- DATATABLE WITH SCROLLING -->
+          <div class="card">
+            <div class="card-header">
+              <h3 class="card-title">Datatable with Scrolling</h3>
+            </div>
+            <div class="card-body">
+              <div class="table-responsive">
+                <div class="table-responsive">
+                  <table id="datatable-basic-scrolling" class="table table-sorting table-hover datatable">
+                    <thead class="thead-light">
+                      <tr>
+                        <th>Browser</th>
+                        <th>Operating System</th>
+                        <th>Visits</th>
+                        <th>New Visits</th>
+                        <th>Bounce Rate</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>Chrome</td>
+                        <td>Macintosh</td>
+                        <td>360</td>
+                        <td>82.78%</td>
+                        <td>87.77%</td>
+                      </tr>
+                      <tr>
+                        <td>Firefox</td>
+                        <td>Windows</td>
+                        <td>280</td>
+                        <td>63.12%</td>
+                        <td>89.34%</td>
+                      </tr>
+                      <tr>
+                        <td>Firefox</td>
+                        <td>Android</td>
+                        <td>236</td>
+                        <td>58.02%</td>
+                        <td>76.19%</td>
+                      </tr>
+                      <tr>
+                        <td>Internet Explorer</td>
+                        <td>Windows</td>
+                        <td>145</td>
+                        <td>45.23%</td>
+                        <td>94.65%</td>
+                      </tr>
+                      <tr>
+                        <td>Safari</td>
+                        <td>Macintosh</td>
+                        <td>103</td>
+                        <td>22.12%</td>
+                        <td>52.43%</td>
+                      </tr>
+                      <tr>
+                        <td>Safari</td>
+                        <td>iOS</td>
+                        <td>302</td>
+                        <td>56.98%</td>
+                        <td>45.53%</td>
+                      </tr>
+                      <tr>
+                        <td>Opera</td>
+                        <td>Windows</td>
+                        <td>328</td>
+                        <td>67.12%</td>
+                        <td>78.34%</td>
+                      </tr>
+                      <tr>
+                        <td>Opera</td>
+                        <td>Macintosh</td>
+                        <td>22</td>
+                        <td>87.21%</td>
+                        <td>79.81%</td>
+                      </tr>
+                      <tr>
+                        <td>Chrome</td>
+                        <td>iOS</td>
+                        <td>45</td>
+                        <td>23.21%</td>
+                        <td>34.67%</td>
+                      </tr>
+                      <tr>
+                        <td>Firefox</td>
+                        <td>Windows</td>
+                        <td>67</td>
+                        <td>27.11%</td>
+                        <td>78.08%</td>
+                      </tr>
+                      <tr>
+                        <td>Chrome</td>
+                        <td>Macintosh</td>
+                        <td>120</td>
+                        <td>80.78%</td>
+                        <td>80.77%</td>
+                      </tr>
+                      <tr>
+                        <td>Chrome</td>
+                        <td>Windows</td>
+                        <td>682</td>
+                        <td>89.44%</td>
+                        <td>95.32%</td>
+                      </tr>
+                      <tr>
+                        <td>Chrome</td>
+                        <td>Windows</td>
+                        <td>172</td>
+                        <td>43.11%</td>
+                        <td>46.89%</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- END DATATABLE WITH SCROLLING -->
+
+          <!-- BASIC DATATABLE -->
+          <div class="card">
+            <div class="card-header">
+              <h3 class="card-title">Datatable with Default Features</h3>
+            </div>
+            <div class="card-body">
+              <div class="table-responsive">
+                <table id="datatable-basic" class="table table-hover table-bordered">
+                  <thead class="thead-light">
+                    <tr>
+                      <th>Browser</th>
+                      <th>Operating System</th>
+                      <th>Visits</th>
+                      <th>New Visits</th>
+                      <th>Bounce Rate</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Chrome</td>
+                      <td>Macintosh</td>
+                      <td>360</td>
+                      <td>82.78%</td>
+                      <td>87.77%</td>
+                    </tr>
+                    <tr>
+                      <td>Chrome</td>
+                      <td>Windows</td>
+                      <td>582</td>
+                      <td>87.24%</td>
+                      <td>90.12%</td>
+                    </tr>
+                    <tr>
+                      <td>Chrome</td>
+                      <td>Linux</td>
+                      <td>172</td>
+                      <td>45.21%</td>
+                      <td>48.81%</td>
+                    </tr>
+                    <tr>
+                      <td>Chrome</td>
+                      <td>iOS</td>
+                      <td>86</td>
+                      <td>35.23%</td>
+                      <td>44.21%</td>
+                    </tr>
+                    <tr>
+                      <td>Firefox</td>
+                      <td>Windows</td>
+                      <td>280</td>
+                      <td>63.12%</td>
+                      <td>89.34%</td>
+                    </tr>
+                    <tr>
+                      <td>Firefox</td>
+                      <td>Android</td>
+                      <td>236</td>
+                      <td>58.02%</td>
+                      <td>76.19%</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+          <!-- END BASIC DATATABLE -->
+        </div>
+      </div>
+      <!-- END MAIN CONTENT -->
+
+      @@include('./partials/right-sidebar.html')
+
+    </div>
+    <!-- END MAIN -->
+
+    <div class="clearfix"></div>
+    
+    @@include('./partials/footer.html')
+
+  </div>
+  <!-- END WRAPPER -->
+
+  <!-- Vendor -->
+  <script src="assets/js/vendor.min.js"></script>
+
+  <!-- Datables Core -->
+  <script src="assets/plugins/datatables.net/jquery.dataTables.min.js"></script>
+  <script src="assets/plugins/datatables.net-bs4/dataTables.bootstrap4.min.js"></script>
+
+  <!-- Datables Extension -->
+  <script src="assets/plugins/datatables.net-buttons/js/dataTables.buttons.min.js"></script>
+  <script src="assets/plugins/datatables.net-buttons/js/buttons.html5.min.js"></script>
+  <script src="assets/plugins/datatables.net-buttons/js/buttons.print.min.js"></script>
+  <script src="assets/plugins/jszip/jszip.min.js"></script>
+  <script src="assets/plugins/pdfmake/pdfmake.min.js"></script>
+  <script src="assets/plugins/pdfmake/vfs_fonts.js"></script>
+  <script src="assets/plugins/datatables.net-buttons-bs4/buttons.bootstrap4.min.js"></script>
+  <script src="assets/plugins/datatables.net-colreorder/dataTables.colReorder.min.js"></script>
+  <script src="assets/plugins/datatables.net-colreorder-bs4/colReorder.bootstrap4.min.js"></script>
+
+  <!-- Datatables Init -->
+  <script src="assets/js/pages/tables-dynamic.init.min.js"></script>
+
+  <!-- App -->
+  <script src="assets/js/app.min.js"></script>
+</body>
+</html>

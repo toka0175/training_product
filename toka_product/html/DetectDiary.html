@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title >Detect Succulent</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <!-- App css -->
+    <link href="assets/css/bootstrap-custom.min.css" rel="stylesheet" type="text/css" />
+    <link href="assets/css/app.min.css" rel="stylesheet" type="text/css" />
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet">
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="assets/images/favicon.png">
+</head>
+
+<body class="sidebar-minified">
+    <!-- WRAPPER -->
+    <div id="wrapper">
+    
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand fixed-top">
+    <div class="navbar-brand d-none d-lg-block">
+    </div>
+    <div class="container-fluid p-0">
+        <button id="tour-fullwidth" type="button" class="btn btn-default btn-toggle-fullwidth"><i class="ti-layout-sidebar-left"></i></button>
+        <form class="form-inline search-form mr-auto d-none d-sm-block">
+        <div class="input-group">
+            <input type="text" value="" class="form-control" placeholder="検索">
+            <div class="input-group-append">
+            <button type="button" class="btn"><i class="fa fa-search"></i></button>
+            </div>
+        </div>
+        </form>
+
+        <div id="navbar-menu">
+        <ul class="nav navbar-nav align-items-center">
+            <li class="nav-item">
+            <a href="#" class="dropdown-toggle btn-toggle-rightsidebar">
+                <i class="ti-layout-sidebar-right"></i>
+            </a>
+            </li>
+        </ul>
+        </div>
+    </div>
+</nav>
+<!-- END NAVBAR -->
+
+<!-- LEFT SIDEBAR -->
+<div id="sidebar-nav" class="sidebar">
+    
+    <button type="button" class="btn-toggle-minified"><i class="ti-view-list"></i></button>
+    <nav>
+      <ul class="nav" id="sidebar-nav-menu">
+         <!--MAIN-->
+         <li class="menu-group">Succulent</li>
+                 <li class="panel">
+
+                    <a href="#SucculentRegist" data-toggle="collapse" data-parent="#sidebar-nav-menu" aria-expanded="" class="">
+                      <i class="ti-plus"></i>
+                      <span class="title">Regist</span> 
+                      <i class="icon-submenu ti-angle-left"></i>
+                  </a>
+                    <div id="SucculentRegist" class="collapse  ">
+                      <ul class="submenu">
+                        <li><a href = "/Succulent/NEW-Succulent">NEW-Succulent-</a></li>
+                        <li><a href = "/Succulent/PlacedMySucculent">Placed My Succulent</a></li>
+                      </ul>
+                    </div>
+
+                     <a href="#SucculentList" data-toggle="collapse" data-parent="#sidebar-nav-menu" aria-expanded="" class="">
+                       <i class="ti-gallery"></i>
+                       <span class="title">Succulent List</span> 
+                       <i class="icon-submenu ti-angle-left"></i>
+                    </a>
+                     <div id="SucculentList" class="collapse  ">
+                       <ul class="submenu">
+                         <li><a href="/Succulent/MySucculentList" class="">My Succulent</a></li>
+                         <li><a href="/Succulent/SucculentList" class="">Succulent List</a></li>
+                       </ul>
+                     </div>
+                   </li> 
+
+                   <li class="menu-group">Shelf</li>
+                   <li class="panel">
+  
+                      <a href="#ShelfRegist" data-toggle="collapse" data-parent="#sidebar-nav-menu" aria-expanded="" class="">
+                        <i class="ti-plus"></i>
+                        <span class="title">Regist</span> 
+                        <i class="icon-submenu ti-angle-left"></i>
+                    </a>
+                      <div id="ShelfRegist" class="collapse  ">
+                        <ul class="submenu">
+                          <li><a href = "/Shelf/NEW-Shelf-">NEW-Shelf-</a></li>
+                        </ul>
+                      </div>
+  
+                       <a href="#ShelfList" data-toggle="collapse" data-parent="#sidebar-nav-menu" aria-expanded="" class="">
+                         <i class="ti-gallery"></i>
+                         <span class="title">List</span> 
+                         <i class="icon-submenu ti-angle-left"></i>
+                      </a>
+                       <div id="ShelfList" class="collapse  ">
+                         <ul class="submenu">
+                           <li><a href="/Shelf/ShelfList" class="">Shelf List</a></li>
+                         </ul>
+                       </div>
+                     </li> 
+
+                  <li class = "menu-group">Diary</li>
+                  <li class = "panel">
+                    <a href="#diary" data-toggle="collapse" data-parent="#sidebar-nav-menu" aria-expanded="" class="">
+                      <i class="ti-book"></i>
+                      <span class="title">Write & List</span> 
+                      <i class="icon-submenu ti-angle-left"></i>
+                    </a>
+                    <div id="diary" class="collapse  ">
+                      <ul class="submenu">
+                        <li><a href="/Diary/DiaryWrite" class=""><i class="icon-submenu ti-agenda"></i>DiaryWrite</a></li>
+                        <li><a href="/Diary/DiaryList" class=""><i class="icon-submenu ti-write"></i>DairyList</a></li>
+                      </ul>
+                    </div>
+                  </li>
+         <!--END MAIN-->
+      </ul>
+    </nav>
+  </div>
+<!-- END LEFT SIDEBAR -->
+    
+        <!-- MAIN -->
+        <div class="main"  th:each = "detSucc : ${detSucc}" th:object = "${detSucc}">
+        
+        <!-- MAIN CONTENT -->
+        <div class="main-content">
+
+            <div class="content-heading">
+              <div class="heading-left">
+                <h1 class="page-title">Dectation Diary</h1>
+              </div>
+            </div>
+    
+            <div class="container-fluid">
+                <div class="content-right clearfix">
+                    <div class="content-panel view-message">
+                      <div class="header">
+                        <div class="top clearfix">
+                          <h3 class="title">日記タイトル　th:text diary.diaryTitle</h3>
+                          <span class="timestamp">記入日　th:text diary.diaryDate</span>
+                        </div>
+                      <div class="content">
+                          <hr class = "content-separator">
+                          <p>本文 th:text = diary.diaryText <br>
+                            Exam:道路交通騒音は心理的不快感や睡眠障害などの悪影響を人体に及ぼす可能性があり、その影響について十分に検討する必要がある。近年コンピュータの性能向上イン伴い、道路や防音壁の計画・設計には数値シミュレーションが数多く用いられている。
+                            また騒音レベルの文うなどの数値シミュレーション結果の評価には、CGによる可視化が有効に用いられている。CDによる可視化は騒音の影響範囲等の把握を容易にするという長所をゆうsるう。これに加えて聴覚情報として騒音そのものを提示することによって、道路交通にかかわる音環境をより直感的に理解・把握することが可能ににある。
+                            　VR空間内にCG映像と音の双方を用いて道路計画や騒音対策立案・設計支援ツールとして有効であり、さらに住民との合意形成を得るうえでも、有効な手段となることが期待できる。
+                            　この点に着目して、著者らはこれまでにVR技術を用いた道路交通騒音評価システムの構築を行てきた。このシステムは、幾何音響理論に基づいた音響計算州法を採用し、種々の騒音減、距離減衰、防音壁などによる回析、反射、地表面による吸音効果等を考慮することができ、多様な音源際現に適用してきた。
+                            しかしながら、本システムで採用したASJモデルは、音のエネルギー収支のみを扱う簡易計算手法である。計算量が少なく扱いやす半面、音波の到来方向や到達時間の遅れ等のは考慮されないという問題点があり、ASJモデルの意味では任意の複雑な音場を3次元的に再現するのは困難であった。
+
+                          </p>
+            
+                       
+                        <div>
+                            <hr class="content-separator">
+
+                            <h4>Picture</h4>
+                            <p>th:src = " '../../../assets/images/' + "succulent.pictures" + '.jpg'</p>
+                            <img src="assets/images/profile-bg.png" alt="Plant" style="text-align:center;">
+                        </div>
+
+                        <div>
+                            <hr class = "content-separate">
+                            <button type = "button" class = "btn btn-primary" disables = "disabled">
+                                <i class = "fa fa-refresh fa-spin"></i>
+                                <span>
+                                    Back Pages
+                                </span>
+                            </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+        <!-- END MAIN CONTENT -->
+        </div>
+        <!-- END MAIN -->
+    
+    
+        <!-- RIGHT SIDEBAR -->
+        <div id="sidebar-right" class="right-sidebar">
+
+            <div class="sidebar-widget">
+            <h4 class="widget-heading"><i class="fa fa-calendar"></i> TODAY</h4>
+            <p class="date">Wednesday, 22 December</p>
+            </div>
+    
+        </div>
+        <!-- END RIGHT SIDEBAR -->
+    
+        </div>
+        <!-- END MAIN -->
+    
+        <div class="clearfix"></div>
+        
+        <!-- footer -->
+
+        <!-- end footer -->
+    
+    </div>
+    <!-- END WRAPPER -->
+    
+    <!-- Vendor -->
+    <script src="assets/js/vendor.min.js"></script>
+    
+    <!-- App -->
+    <script src="assets/js/app.min.js"></script>
+</body>
+</html>

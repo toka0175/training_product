@@ -1,0 +1,911 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <title>Dashboard v3 | Klorofil Pro - Bootstrap 4 Admin Dashboard Template</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+
+  <!-- Chartist css -->
+  <link href="assets/plugins/chartist/chartist.min.css" rel="stylesheet" type="text/css" />
+
+  <!-- Chart.js css -->
+  <link href="assets/plugins/chart.js/Chart.min.css" rel="stylesheet" type="text/css" />
+
+  <!-- Datatables core css -->
+  <link href="assets/plugins/datatables.net-bs4/dataTables.bootstrap4.min.css" rel="stylesheet" type="text/css" />
+
+  <!-- Datatables extensions css -->
+  <link href="assets/plugins/datatables.net-buttons-bs4/buttons.bootstrap4.min.css" rel="stylesheet" type="text/css" />
+
+  <!-- App css -->
+  <link href="assets/css/bootstrap-custom.min.css" rel="stylesheet" type="text/css" />
+  <link href="assets/css/app.min.css" rel="stylesheet" type="text/css" />
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet">
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="assets/images/favicon.png">
+</head>
+<body>
+  <!-- WRAPPER -->
+  <div id="wrapper">
+
+    @@include('./partials/topbar.html')
+
+    @@include('./partials/left-sidebar.html', {"parentMenu": "dashboards", "activeMenu": "dashboard3"})
+
+    <!-- MAIN -->
+    <div class="main">
+
+      <!-- MAIN CONTENT -->
+      <div class="main-content">
+
+        @@include('./partials/content-heading.html', {"title": "Dashboard v3", "subtitle": "Simple and minimal dashboard."})
+
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-lg-9">
+              <div class="card">
+                <div class="card-header d-flex justify-content-between align-items-center">
+                  <h3 class="card-title">Weekly Overview</h3>
+                  <div class="right">
+                    <span class="card-info">Period: Oct 14, 2016 - Oct 21, 2016</span>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <!-- METRICS -->
+                  <div class="row mb-5">
+                    <div class="col-md-3 col-6">
+                      <div class="widget-metric_6 animate">
+                        <span class="icon-wrapper custom-bg-yellow"><i class="fa fa-download"></i></span>
+                        <div class="right">
+                          <span class="value">1252</span>
+                          <span class="title">Downloads</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-3 col-6">
+                      <div class="widget-metric_6 animate">
+                        <span class="icon-wrapper custom-bg-orange"><i class="fa fa-shopping-bag"></i></span>
+                        <div class="right">
+                          <span class="value">203</span>
+                          <span class="title">Sales</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-3 col-6">
+                      <div class="widget-metric_6 animate">
+                        <span class="icon-wrapper custom-bg-blue3"><i class="fa fa-eye"></i></span>
+                        <div class="right">
+                          <span class="value">274K</span>
+                          <span class="title">Unique Visits</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-3 col-6">
+                      <div class="widget-metric_6 animate">
+                        <span class="icon-wrapper custom-bg-green2"><i class="fa fa-check"></i></span>
+                        <div class="right">
+                          <span class="value">35%</span>
+                          <span class="title">Conversion</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- END METRICS -->
+
+                  <!-- HEADLINE CHART -->
+                  <form id="headlinechart-controls" class="mt-3 mb-5">
+                    <span class="fancy-checkbox custom-bgcolor-blue">
+                      <label><input type="checkbox" id="toggleWeeklyAvg"><span>Include Weekly Average</span></label>
+                    </span>
+                    <span class="fancy-checkbox custom-bgcolor-blue">
+                      <label><input type="checkbox" id="toggleTension"><span>Straight Chart</span></label>
+                    </span>
+                  </form>
+                  <canvas id="headline-chart" height="120"></canvas>
+                  <!-- END HEADLINE CHART -->
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3">
+              <!-- VERTICAL METRICS -->
+              <div class="card">
+                <div class="card-body p-0">
+                  <ul class="list-unstyled list-widget-vertical" id="growth-vertical-metric">
+                    <li>
+                      <div class="widget-metric_2">
+                        <i class="fa fa-money icon"></i>
+                        <div class="right">
+                          <span class="title">TOTAL REVENUE</span>
+                          <span class="value">$65938</span>
+                          <span class="percentage text-indicator-green"><i class="fa fa-level-up"></i>  25.13%</span>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="widget-metric_2">
+                        <i class="fa fa-calendar-o icon"></i>
+                        <div class="right">
+                          <span class="title">THIS WEEK</span>
+                          <span class="value">$738</span>
+                          <span class="percentage text-indicator-red"><i class="fa fa-level-down"></i> 2.67%</span>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="widget-metric_2">
+                        <i class="fa fa-shopping-basket icon"></i>
+                        <div class="right">
+                          <span class="title">WEEKLY SALES</span>
+                          <span class="value">236</span>
+                          <span class="percentage text-indicator-green"><i class="fa fa-level-up"></i> 14.86%</span>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="widget-metric_2">
+                        <i class="fa fa-plus-square icon"></i>
+                        <div class="right">
+                          <span class="title"><a href="#" class="menu">ADD NEW WIDGET</a></span>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="widget-metric_2">
+                        <i class="fa fa-cog icon"></i>
+                        <div class="right">
+                          <span class="title"><a href="#" class="menu">SETTINGS</a></span>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <!-- END VERTICAL METRICS -->
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-lg-4">
+              <!-- TASKS -->
+              <div class="card">
+                <div class="card-header d-flex justify-content-between align-items-center">
+                  <h3 class="card-title">My Tasks</h3>
+                  <div class="right">
+                    <button type="button" class="btn btn-primary btn-sm"><i class="fa fa-plus"></i> Add Task</button>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <ul class="list-unstyled task-list">
+                    <li>
+                      <p>Updating Users Settings <span class="label-percent">23%</span></p>
+                      <div class="progress progress-transparent custom-color-blue" style="height: 5px;">
+                        <div class="progress-bar" role="progressbar" aria-valuenow="23" aria-valuemin="0" aria-valuemax="100" style="width:23%"></div>
+                      </div>
+                    </li>
+                    <li>
+                      <p>Load &amp; Stress Test <span class="label-percent">80%</span></p>
+                      <div class="progress progress-transparent custom-color-orange" style="height: 5px;">
+                        <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width:80%"></div>
+                      </div>
+                    </li>
+                    <li>
+                      <p>Data Duplication Check <span class="label-percent">90%</span></p>
+                      <div class="progress progress-transparent custom-color-purple" style="height: 5px;">
+                        <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="width:90%"></div>
+                      </div>
+                    </li>
+                    <li>
+                      <p>Server Check <span class="label-percent">45%</span></p>
+                      <div class="progress progress-transparent custom-color-yellow" style="height: 5px;">
+                        <div class="progress-bar" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100" style="width:45%"></div>
+                      </div>
+                    </li>
+                    <li>
+                      <p>Mobile App Development <span class="label-percent">10%</span></p>
+                      <div class="progress progress-transparent custom-color-blue" style="height: 5px;">
+                        <div class="progress-bar" role="progressbar" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100" style="width:10%"></div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <!-- END TASKS -->
+            </div>
+            <div class="col-lg-8">
+              <!-- RECENT PURCHASES -->
+              <div class="card">
+                <div class="card-header d-flex justify-content-between align-items-center">
+                  <h3 class="card-title">Recent Purchases</h3>
+                  <div class="right">
+                    <span class="link"><i class="fa fa-shopping-bag"></i> <a href="#">View all purchases</a></span>
+                  </div>
+                </div>
+                <div class="card-body p-0">
+                  <div class="table-responsive">
+                    <table class="table table-minimal table-fullwidth table-striped">
+                      <thead>
+                        <tr><th>ORDER NO.</th><th>NAME</th><th>AMOUNT</th><th>DATE &amp; TIME</th><th>STATUS</th></tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td><a href="#">763648</a></td>
+                          <td>Steve</td><td>$122</td>
+                          <td>Oct 21, 2016 &nbsp;&nbsp;<span class="text-muted">10:23 AM</span></td>
+                          <td><span class="badge badge-success">COMPLETED</span></td>
+                        </tr>
+                        <tr>
+                          <td><a href="#">763649</a></td>
+                          <td>Amber</td><td>$62</td>
+                          <td>Oct 21, 2016 &nbsp;&nbsp;<span class="text-muted">10:18 AM</span></td>
+                          <td><span class="badge badge-warning">PENDING</span></td>
+                        </tr>
+                        <tr>
+                          <td><a href="#">763650</a></td>
+                          <td>Michael</td><td>$34</td>
+                          <td>Oct 18, 2016 &nbsp;&nbsp;<span class="text-muted">09:22 AM</span></td>
+                          <td><span class="badge badge-danger">FAILED</span></td>
+                        </tr>
+                        <tr>
+                          <td><a href="#">763651</a></td>
+                          <td>Roger</td><td>$186</td>
+                          <td>Oct 17, 2016 &nbsp;&nbsp;<span class="text-muted">08:47 AM</span></td>
+                          <td><span class="badge badge-success">COMPLETED</span></td>
+                        </tr>
+                        <tr>
+                          <td><a href="#">763652</a></td>
+                          <td>Smith</td><td>$362</td>
+                          <td>Oct 16, 2016 &nbsp;&nbsp;<span class="text-muted">11:18 PM</span></td>
+                          <td><span class="badge badge-success">COMPLETED</span></td>
+                        </tr>
+                        <tr>
+                          <td><a href="#">763651</a></td>
+                          <td>Claudia</td><td>$112</td>
+                          <td>Oct 15, 2016 &nbsp;&nbsp;<span class="text-muted">10:08 PM</span></td>
+                          <td><span class="badge badge-success">COMPLETED</span></td>
+                        </tr>
+                        <tr>
+                          <td><a href="#">763650</a></td>
+                          <td>Simon</td><td>$285</td>
+                          <td>Oct 15, 2016 &nbsp;&nbsp;<span class="text-muted">09:42 PM</span></td>
+                          <td><span class="badge badge-warning">PENDING</span></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+              <!-- END RECENT PURCHASES -->
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-lg-7">
+              <!-- TOP PRODUCTS TABLE -->
+              <div class="card">
+                <h3 class="card-header">Top Products</h3>
+                <div class="card-body p-0">
+                  <div class="table-responsive">
+                    <table class="table table-minimal table-striped table-fullwidth table-icons-stat">
+                      <thead class="hide">
+                        <tr><th>Product Name</th><th>Views</th><th>Sales</th><th>Revenue</th><th>Downloads</th><th>View Detail</th></tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>OneBeez</td>
+                          <td><i class="fa fa-eye"></i> 1656</td>
+                          <td><i class="fa fa-shopping-cart"></i> 454</td>
+                          <td><i class="fa fa-money"></i> $4536</td>
+                          <td><i class="fa fa-cloud-download"></i> 3467</td>
+                          <td><a href="#"><i class="fa fa-bar-chart"></i></a></td>
+                        </tr>
+                        <tr>
+                          <td>Hover</td>
+                          <td><i class="fa fa-eye"></i> 4254</td>
+                          <td><i class="fa fa-shopping-cart"></i> 452</td>
+                          <td><i class="fa fa-money"></i> $574</td>
+                          <td><i class="fa fa-cloud-download"></i> 1273</td>
+                          <td><a href="#"><i class="fa fa-bar-chart"></i></a></td>
+                        </tr>
+                        <tr>
+                          <td>KingAdmin</td>
+                          <td><i class="fa fa-eye"></i> 87989</td>
+                          <td><i class="fa fa-shopping-cart"></i> 8345</td>
+                          <td><i class="fa fa-money"></i> $756142</td>
+                          <td><i class="fa fa-cloud-download"></i> 10837</td>
+                          <td><a href="#"><i class="fa fa-bar-chart"></i></a></td>
+                        </tr>
+                        <tr>
+                          <td>Repute</td>
+                          <td><i class="fa fa-eye"></i> 25754</td>
+                          <td><i class="fa fa-shopping-cart"></i> 5663</td>
+                          <td><i class="fa fa-money"></i> $1754</td>
+                          <td><i class="fa fa-cloud-download"></i> 1654</td>
+                          <td><a href="#"><i class="fa fa-bar-chart"></i></a></td>
+                        </tr>
+                        <tr>
+                          <td>Bravana</td>
+                          <td><i class="fa fa-eye"></i> 86745</td>
+                          <td><i class="fa fa-shopping-cart"></i> 456</td>
+                          <td><i class="fa fa-money"></i> $5642</td>
+                          <td><i class="fa fa-cloud-download"></i> 2788</td>
+                          <td><a href="#"><i class="fa fa-bar-chart"></i></a></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+              <!-- END TOP PRODUCTS TABLE -->
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="widget widget-task-progress">
+                    <div class="top d-flex justify-content-between align-items-center">
+                      <span class="title">Review Final Design</span> <span class="percentage">85%</span>
+                    </div>
+                    <div class="progress progress-sm task-progress progress-transparent custom-color-blue3">
+                      <div class="progress-bar" aria-valuenow="85" style="width: 85%;"></div>
+                    </div>
+                    <div class="bottom">
+                      <i class="fa fa-check text-success"></i> <a href="#">Mark complete</a>
+                      <span class="note">12 days remaining</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="widget widget-mini-realtime-usage">
+                    <div class="chart" id="real-time-usage"></div>
+                    <div class="usage-info clearfix">
+                      <div class="left">
+                        <span class="title">MEMORY AVAILABLE</span>
+                        <span class="value">512 GB</span>
+                      </div>
+                      <div class="right">
+                        <span class="title">MEMORY USED</span>
+                        <span class="value"><span class="number">19.30</span> GB</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- SYSTEM LOAD -->
+              <div class="widget widget-system-load">
+                <div id="load-chart" class="chart easy-pie-chart" data-percent="70">
+                  <span class="percent">70</span>
+                </div>
+                <div class="info">
+                  <h4 class="heading-title">System Load</h4>
+                  <div class="row">
+                    <div class="col-4">
+                      <span class="title">LOW</span>
+                      <span class="value"><span class="number">45</span>%</span>
+                    </div>
+                    <div class="col-4">
+                      <span class="title">AVERAGE</span>
+                      <span class="value"><span class="number">73</span>%</span>
+                    </div>
+                    <div class="col-4">
+                      <span class="title">HIGH</span>
+                      <span class="value"><span class="number">95</span>%</span>
+                    </div>
+                  </div>
+                  <div class="controls">
+                    <a href="#" class="btn btn-primary btn-sm"><i class="fa fa-cog"></i> MANAGE</a>
+                    <a href="#" class="btn btn-outline-light btn-sm"><i class="fa fa-file-text-o"></i> VIEW SYS DOC</a>
+                  </div>
+                </div>
+              </div>
+              <!-- END SYSTEM LOAD -->
+            </div>
+            <div class="col-lg-5">
+              <!-- LEADERBOARD -->
+              <div class="card">
+                <h3 class="card-header">Leaderboard</h3>
+                <div class="card-body p-0">
+                  <div class="leaderboard pt-3">
+                    <div class="custom-tabs-line tabs-line-bottom left-aligned">
+                      <ul class="nav nav-fill" role="tablist">
+                        <li class="nav-item"><a href="#following" class="nav-link active" role="tab" data-toggle="tab">FOLLOWING</a></li>
+                        <li class="nav-item"><a href="#global" class="nav-link" role="tab" data-toggle="tab">GLOBAL</a></li>
+                      </ul>
+                    </div>
+                    <div class="tab-content">
+                      <div role="tabpanel" class="tab-pane active" id="following">
+                        <ul class="list-unstyled list-positions">
+                          <li class="position up clearfix">
+                            <span class="change"><i class="fa fa-sort-up icon-change"></i> 130</span>
+                            <div class="account">
+                              <div class="user">
+                                <img src="assets/images/people/male1.png" class="user-picture" alt="">
+                                <span class="position-number">1</span>
+                              </div>
+                              <div class="right">
+                                <a href="#" class="name">Johnny Jenkins</a>
+                                <span class="username">johnny.j</span>
+                              </div>
+                            </div>
+                            <span class="points">34535</span>
+                          </li>
+                          <li class="position down clearfix">
+                            <span class="change"><i class="fa fa-sort-down icon-change"></i> 73</span>
+                            <div class="account">
+                              <div class="user">
+                                <span class="user-picture anonymous"><i class="fa fa-user-secret"></i></span>
+                                <span class="position-number">2</span>
+                              </div>
+                              <div class="right">
+                                <a href="#" class="name">Betty Peters</a>
+                                <span class="username">betty.petters</span>
+                              </div>
+                            </div>
+                            <span class="points">32873</span>
+                          </li>
+                          <li class="position up clearfix">
+                            <span class="change"><i class="fa fa-sort-up icon-change"></i> 86</span>
+                            <div class="account">
+                              <div class="user">
+                                <img src="assets/images/people/female1.png" class="user-picture" alt="">
+                                <span class="position-number">3</span>
+                              </div>
+                              <div class="right">
+                                <a href="#" class="name">Martha</a>
+                                <span class="username">justmartha90</span>
+                              </div>
+                            </div>
+                            <span class="points">32010</span>
+                          </li>
+                          <li class="position up clearfix">
+                            <span class="change"><i class="fa fa-sort-up icon-change"></i> 342</span>
+                            <div class="account">
+                              <div class="user">
+                                <img src="assets/images/people/male2.png" class="user-picture" alt="">
+                                <span class="position-number">4</span>
+                              </div>
+                              <div class="right">
+                                <a href="#" class="name">Eric Ellis</a>
+                                <span class="username">eric.ellis</span>
+                              </div>
+                            </div>
+                            <span class="points">29083</span>
+                          </li>
+                          <li class="position down clearfix">
+                            <span class="change"><i class="fa fa-sort-down icon-change"></i> 173</span>
+                            <div class="account">
+                              <div class="user">
+                                <img src="assets/images/people/female2.png" class="user-picture" alt="">
+                                <span class="position-number">5</span>
+                              </div>
+                              <div class="right">
+                                <a href="#" class="name">Cynthia James</a>
+                                <span class="username">c.james</span>
+                              </div>
+                            </div>
+                            <span class="points">28847</span>
+                          </li>
+                          <li class="position down clearfix">
+                            <span class="change"><i class="fa fa-sort-down icon-change"></i> 22</span>
+                            <div class="account">
+                              <div class="user">
+                                <img src="assets/images/people/female3.png" class="user-picture" alt="">
+                                <span class="position-number">6</span>
+                              </div>
+                              <div class="right">
+                                <a href="#" class="name">Deborah Larson</a>
+                                <span class="username">thelarson53</span>
+                              </div>
+                            </div>
+                            <span class="points">28598</span>
+                          </li>
+                        </ul>
+                      </div>
+                      <div role="tabpanel" class="tab-pane" id="global">
+                        <ul class="list-unstyled list-positions">
+                          <li class="position up clearfix">
+                            <span class="change"><i class="fa fa-sort-up icon-change"></i> 287</span>
+                            <div class="account">
+                              <div class="user">
+                                <img src="assets/images/people/male3.png" class="user-picture" alt="">
+                                <span class="position-number">1</span>
+                              </div>
+                              <div class="right">
+                                <a href="#" class="name">Abraham</a>
+                                <span class="username">abe085</span>
+                              </div>
+                            </div>
+                            <span class="points">55198</span>
+                          </li>
+                          <li class="position up clearfix">
+                            <span class="change"><i class="fa fa-sort-up icon-change"></i> 23</span>
+                            <div class="account">
+                              <div class="user">
+                                <img src="assets/images/people/female4.png" class="user-picture" alt="">
+                                <span class="position-number">2</span>
+                              </div>
+                              <div class="right">
+                                <a href="#" class="name">Brittany Morales</a>
+                                <span class="username">britt_morales123</span>
+                              </div>
+                            </div>
+                            <span class="points">55006</span>
+                          </li>
+                          <li class="position up clearfix">
+                            <span class="change"><i class="fa fa-sort-up icon-change"></i> 15</span>
+                            <div class="account">
+                              <div class="user">
+                                <img src="assets/images/people/male4.png" class="user-picture" alt="">
+                                <span class="position-number">3</span>
+                              </div>
+                              <div class="right">
+                                <a href="#" class="name">Gary Adams</a>
+                                <span class="username">GaryHimSelf</span>
+                              </div>
+                            </div>
+                            <span class="points">54781</span>
+                          </li>
+                          <li class="position down clearfix">
+                            <span class="change"><i class="fa fa-sort-down icon-change"></i> 22</span>
+                            <div class="account">
+                              <div class="user">
+                                <span class="user-picture anonymous"><i class="fa fa-user-secret"></i></span>
+                                <span class="position-number">4</span>
+                              </div>
+                              <div class="right">
+                                <a href="#" class="name">Andrew Peters</a>
+                                <span class="username">andrew093</span>
+                              </div>
+                            </div>
+                            <span class="points">54632</span>
+                          </li>
+                          <li class="position down clearfix">
+                            <span class="change"><i class="fa fa-sort-down icon-change"></i> 167</span>
+                            <div class="account">
+                              <div class="user">
+                                <span class="user-picture anonymous"><i class="fa fa-user-secret"></i></span>
+                                <span class="position-number">5</span>
+                              </div>
+                              <div class="right">
+                                <a href="#" class="name">David Fernandez</a>
+                                <span class="username">fernandezzz</span>
+                              </div>
+                            </div>
+                            <span class="points">54411</span>
+                          </li>
+                          <li class="position up clearfix">
+                            <span class="change"><i class="fa fa-sort-up icon-change"></i> 43</span>
+                            <div class="account">
+                              <div class="user">
+                                <span class="user-picture anonymous"><i class="fa fa-user-secret"></i></span>
+                                <span class="position-number">6</span>
+                              </div>
+                              <div class="right">
+                                <a href="#" class="name">Nicole Perkins</a>
+                                <span class="username">nperkins987</span>
+                              </div>
+                            </div>
+                            <span class="points">54387</span>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- END LEADERBOARD -->
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-lg-3">
+              <!-- TODO LIST -->
+              <div class="card">
+                <div class="card-header d-flex justify-content-between align-items-center">
+                  <h3 class="card-title">To-Do List</h3>
+                  <div class="right">
+                    <button type="button" class="btn btn-primary btn-sm"><i class="fa fa-plus"></i> Add Task</button>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <ul class="list-unstyled todo-list">
+                    <li class="completed">
+                      <label class="control-inline fancy-checkbox custom-bgcolor-blue">
+                        <input type="checkbox" checked><span></span>
+                      </label>
+                      <p>Has movet praesent argumentum an. Elit praesent concludaturque cu vim. Fierent tractatos pri at</p>
+                    </li>
+                    <li class="completed">
+                      <label class="control-inline fancy-checkbox custom-bgcolor-blue">
+                        <input type="checkbox" checked><span></span>
+                      </label>
+                      <p>Latine diceret qui te, te tation timeam cum, vim ei iudico eleifend. Ei eum graeci minimum, suavitate omittantur nec ex</p>
+                    </li>
+                    <li>
+                      <label class="control-inline fancy-checkbox custom-bgcolor-blue">
+                        <input type="checkbox"><span></span>
+                      </label>
+                      <p>Vivendum philosophia ea cum, cum id nonumy nemore discere.</p>
+                    </li>
+                    <li>
+                      <label class="control-inline fancy-checkbox custom-bgcolor-blue">
+                        <input type="checkbox"><span></span>
+                      </label>
+                      <p> Sea timeam philosophia instructior id, an his delenit splendide, error abhorreant in eos.</p>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <!-- END TODO LIST -->
+            </div>
+            <div class="col-lg-5">
+              <div class="card card-scrolling" style="height: 450px;">
+                <div class="card-header">
+                  <div class="card-card-title">Contacts</div>
+                  <div class="d-flex justify-content-between align-items-center mt-2">
+                    <div class="w-100 mr-3">
+                      <form class="search-form search-contact">
+                        <input type="text" value="" class="form-control" placeholder="Search contacts">
+                        <button type="button" class="btn btn-default"><i class="fa fa-search"></i></button>
+                      </form>
+                    </div>
+                    <div class="text-right">
+                      <button type="button" class="btn btn-primary">
+                        <span class="sr-only">Add Contact</span>
+                        <i class="fa fa-user-plus"></i>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-body scrollable">
+                  <ul class="list-unstyled list-contacts">
+                    <li>
+                      <div class="media">
+                        <img src="assets/images/people/female3.png" class="picture" alt="">
+                        <span class="status online"></span>
+                      </div>
+                      <div class="info">
+                        <span class="name">Theresa Santos</span>
+                        <span class="email">tsantos@gmail.com</span>
+                      </div>
+                      <div class="controls">
+                        <a href="#"><i class="fa fa-phone-square"></i></a>
+                        <a href="#"><i class="fa fa-commenting-o"></i></a>
+                        <a href="#"><i class="fa fa-envelope-o"></i></a>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="media">
+                        <div class="picture custom-bg-purple">PO</div>
+                        <span class="status"></span>
+                      </div>
+                      <div class="info">
+                        <span class="name">Paul Owen</span>
+                        <span class="email">paul.owen@yahoo.com</span>
+                      </div>
+                      <div class="controls">
+                        <a href="#"><i class="fa fa-phone-square"></i></a>
+                        <a href="#"><i class="fa fa-commenting-o"></i></a>
+                        <a href="#"><i class="fa fa-envelope-o"></i></a>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="media">
+                        <div class="picture custom-bg-blue3">MB</div>
+                        <span class="status"></span>
+                      </div>
+                      <div class="info">
+                        <span class="name">Michael Bradley</span>
+                        <span class="email">mbradley80@mymail.com</span>
+                      </div>
+                      <div class="controls">
+                        <a href="#"><i class="fa fa-phone-square"></i></a>
+                        <a href="#"><i class="fa fa-commenting-o"></i></a>
+                        <a href="#"><i class="fa fa-envelope-o"></i></a>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="media">
+                        <img src="assets/images/people/male1.png" class="picture" alt="">
+                        <span class="status online"></span>
+                      </div>
+                      <div class="info">
+                        <span class="name">Bruce Bowman</span>
+                        <span class="email">the_bruce@domain.com</span>
+                      </div>
+                      <div class="controls">
+                        <a href="#"><i class="fa fa-phone-square"></i></a>
+                        <a href="#"><i class="fa fa-commenting-o"></i></a>
+                        <a href="#"><i class="fa fa-envelope-o"></i></a>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="media">
+                        <img src="assets/images/people/female4.png" class="picture" alt="">
+                        <span class="status"></span>
+                      </div>
+                      <div class="info">
+                        <span class="name">Karen Price</span>
+                        <span class="email">karen0987@gmail.com</span>
+                      </div>
+                      <div class="controls">
+                        <a href="#"><i class="fa fa-phone-square"></i></a>
+                        <a href="#"><i class="fa fa-commenting-o"></i></a>
+                        <a href="#"><i class="fa fa-envelope-o"></i></a>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="media">
+                        <div class="picture custom-bg-blue3">JR</div>
+                        <span class="status online"></span>
+                      </div>
+                      <div class="info">
+                        <span class="name">Joyce Rivera</span>
+                        <span class="email">joyce@mymail.com</span>
+                      </div>
+                      <div class="controls">
+                        <a href="#"><i class="fa fa-phone-square"></i></a>
+                        <a href="#"><i class="fa fa-commenting-o"></i></a>
+                        <a href="#"><i class="fa fa-envelope-o"></i></a>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="media">
+                        <img src="assets/images/people/female5.png" class="picture" alt="">
+                        <span class="status online"></span>
+                      </div>
+                      <div class="info">
+                        <span class="name">Martha Mendoza</span>
+                        <span class="email">martha.mendoza@gmail.com</span>
+                      </div>
+                      <div class="controls">
+                        <a href="#"><i class="fa fa-phone-square"></i></a>
+                        <a href="#"><i class="fa fa-commenting-o"></i></a>
+                        <a href="#"><i class="fa fa-envelope-o"></i></a>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4">
+              <div class="card card-scrolling" style="height: 450px;">
+                <h3 class="card-header">Recent User Activity</h3>
+                <div class="card-body scrollable">
+                  <ul class="list-unstyled activity-list">
+                    <li>
+                      <img src="assets/images/user1.png" alt="Avatar" class="img-circle pull-left avatar">
+                      <p><a href="#">Michael</a> has achieved 80% of his completed tasks <span class="timestamp">20 minutes ago</span></p>
+                    </li>
+                    <li>
+                      <img src="assets/images/user2.png" alt="Avatar" class="img-circle pull-left avatar">
+                      <p><a href="#">Daniel</a> has been added as a team member to project <a href="#">System Update</a> <span class="timestamp">Yesterday</span></p>
+                    </li>
+                    <li>
+                      <img src="assets/images/user3.png" alt="Avatar" class="img-circle pull-left avatar">
+                      <p><a href="#">Martha</a> created a new heatmap view <a href="#">Landing Page</a> <span class="timestamp">2 days ago</span></p>
+                    </li>
+                    <li>
+                      <img src="assets/images/user4.png" alt="Avatar" class="img-circle pull-left avatar">
+                      <p><a href="#">Jane</a> has completed all of the tasks <span class="timestamp">2 days ago</span></p>
+                    </li>
+                    <li>
+                      <img src="assets/images/user5.png" alt="Avatar" class="img-circle pull-left avatar">
+                      <p><a href="#">Jason</a> started a discussion about <a href="#">Weekly Meeting</a> <span class="timestamp">3 days ago</span></p>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <h3 class="card-header">Visits Data</h3>
+            <div class="card-body">
+              <div class="table-responsive">
+                <table id="datatable-export" class="table table-striped">
+                  <thead class="thead-light">
+                    <tr>
+                      <th>Browser</th>
+                      <th>Operating System</th>
+                      <th>Visits</th>
+                      <th>New Visits</th>
+                      <th>Bounce Rate</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Chrome</td>
+                      <td>Macintosh</td>
+                      <td>360</td>
+                      <td>82.78%</td>
+                      <td>87.77%</td>
+                    </tr>
+                    <tr>
+                      <td>Chrome</td>
+                      <td>Windows</td>
+                      <td>582</td>
+                      <td>87.24%</td>
+                      <td>90.12%</td>
+                    </tr>
+                    <tr>
+                      <td>Chrome</td>
+                      <td>Linux</td>
+                      <td>172</td>
+                      <td>45.21%</td>
+                      <td>48.81%</td>
+                    </tr>
+                    <tr>
+                      <td>Chrome</td>
+                      <td>iOS</td>
+                      <td>86</td>
+                      <td>35.23%</td>
+                      <td>44.21%</td>
+                    </tr>
+                    <tr>
+                      <td>Firefox</td>
+                      <td>Windows</td>
+                      <td>280</td>
+                      <td>63.12%</td>
+                      <td>89.34%</td>
+                    </tr>
+                    <tr>
+                      <td>Firefox</td>
+                      <td>Android</td>
+                      <td>236</td>
+                      <td>58.02%</td>
+                      <td>76.19%</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- END MAIN CONTENT -->
+
+      @@include('./partials/right-sidebar.html')
+
+    </div>
+    <!-- END MAIN -->
+
+    <div class="clearfix"></div>
+    
+    @@include('./partials/footer.html')
+
+  </div>
+  <!-- END WRAPPER -->
+
+  <!-- Vendor -->
+  <script src="assets/js/vendor.min.js"></script>
+
+  <!-- Plugins -->
+  <script src="assets/plugins/chart.js/Chart.min.js"></script>
+  <script src="assets/plugins/chartist/chartist.min.js"></script>
+  <script src="assets/plugins/flot/jquery.canvaswrapper.js"></script>
+  <script src="assets/plugins/flot/jquery.colorhelpers.js"></script>
+  <script src="assets/plugins/flot/jquery.flot.js"></script>
+  <script src="assets/plugins/flot/jquery.flot.saturated.js"></script>
+  <script src="assets/plugins/flot/jquery.flot.browser.js"></script>
+  <script src="assets/plugins/flot/jquery.flot.drawSeries.js"></script>
+  <script src="assets/plugins/flot/jquery.flot.uiConstants.js"></script>
+  <script src="assets/plugins/flot/jquery.flot.resize.js"></script>
+  <script src="assets/plugins/easy-pie-chart/jquery.easypiechart.min.js"></script>
+  <script src="assets/plugins/datatables.net/jquery.dataTables.min.js"></script>
+  <script src="assets/plugins/datatables.net-bs4/dataTables.bootstrap4.min.js"></script>
+  <script src="assets/plugins/datatables.net-buttons/js/dataTables.buttons.min.js"></script>
+  <script src="assets/plugins/datatables.net-buttons/js/buttons.html5.min.js"></script>
+  <script src="assets/plugins/datatables.net-buttons/js/buttons.print.min.js"></script>
+  <script src="assets/plugins/jszip/jszip.min.js"></script>
+  <script src="assets/plugins/pdfmake/pdfmake.min.js"></script>
+  <script src="assets/plugins/pdfmake/vfs_fonts.js"></script>
+  <script src="assets/plugins/datatables.net-buttons-bs4/buttons.bootstrap4.min.js"></script>
+
+  <!-- Init -->
+  <script src="assets/js/pages/dashboard3.init.js"></script>
+
+  <!-- App -->
+  <script src="assets/js/app.min.js"></script>
+</body>
+</html>

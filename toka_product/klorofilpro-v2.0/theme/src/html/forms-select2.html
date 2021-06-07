@@ -1,0 +1,321 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <title>Select2 | Klorofil Pro - Bootstrap 4 Admin Dashboard Template</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+  
+  <!-- Select2 css -->
+  <link href="assets/plugins/select2/select2.min.css" rel="stylesheet">
+
+  <!-- App css -->
+  <link href="assets/css/bootstrap-custom.min.css" rel="stylesheet" type="text/css" />
+  <link href="assets/css/app.min.css" rel="stylesheet" type="text/css" />
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet">
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="assets/images/favicon.png">
+</head>
+<body>
+  <!-- WRAPPER -->
+  <div id="wrapper">
+
+    @@include('./partials/topbar.html')
+
+    @@include('./partials/left-sidebar.html', {"parentMenu": "forms", "activeMenu": "select2"})
+
+    <!-- MAIN -->
+    <div class="main">
+
+      <!-- MAIN CONTENT -->
+      <div class="main-content">
+
+        @@include('./partials/content-heading.html', {"title": "Select2", "subtitle": "The jQuery replacement for select boxes."})
+
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-md-6">
+              <!-- basic demo -->
+              <div class="card">
+                <div class="card-header">Basic Demo</div>
+                <div class="card-body">
+                  <p>Single Select</p>
+                  <select class="select-basic form-control">
+                    <optgroup label="Alaskan/Hawaiian Time Zone">
+                      <option value="AK">Alaska</option>
+                      <option value="HI">Hawaii</option>
+                    </optgroup>
+                    <optgroup label="Pacific Time Zone">
+                      <option value="CA">California</option>
+                      <option value="NV">Nevada</option>
+                      <option value="OR">Oregon</option>
+                      <option value="WA">Washington</option>
+                    </optgroup>
+                    <optgroup label="Mountain Time Zone">
+                      <option value="AZ">Arizona</option>
+                      <option value="CO">Colorado</option>
+                      <option value="ID">Idaho</option>
+                      <option value="MT">Montana</option>
+                    </optgroup>
+                    <optgroup label="Central Time Zone">
+                      <option value="AL">Alabama</option>
+                      <option value="AR">Arkansas</option>
+                      <option value="IL">Illinois</option>
+                      <option value="IA">Iowa</option>
+                    </optgroup>
+                    <optgroup label="Eastern Time Zone">
+                      <option value="CT">Connecticut</option>
+                      <option value="DE">Delaware</option>
+                      <option value="FL">Florida</option>
+                    </optgroup>
+                  </select>
+        
+                  <br><br>
+
+                  <p>Multiple Select</p>
+                  <select class="select-multiple-basic form-control w-100" multiple="multiple">
+                    <optgroup label="Alaskan/Hawaiian Time Zone">
+                      <option value="AK">Alaska</option>
+                      <option value="HI">Hawaii</option>
+                    </optgroup>
+                    <optgroup label="Pacific Time Zone">
+                      <option value="CA">California</option>
+                      <option value="NV">Nevada</option>
+                      <option value="OR">Oregon</option>
+                      <option value="WA">Washington</option>
+                    </optgroup>
+                    <optgroup label="Mountain Time Zone">
+                      <option value="AZ">Arizona</option>
+                      <option value="CO">Colorado</option>
+                      <option value="ID">Idaho</option>
+                      <option value="MT">Montana</option>
+                    </optgroup>
+                    <optgroup label="Central Time Zone">
+                      <option value="AL">Alabama</option>
+                      <option value="AR">Arkansas</option>
+                      <option value="IL">Illinois</option>
+                      <option value="IA">Iowa</option>
+                    </optgroup>
+                    <optgroup label="Eastern Time Zone">
+                      <option value="CT">Connecticut</option>
+                      <option value="DE">Delaware</option>
+                      <option value="FL">Florida</option>
+                    </optgroup>
+                  </select>
+                </div>
+              </div>
+              <!-- end basic demo -->
+
+              <!-- tagging support -->
+              <div class="card">
+                <div class="card-header">Tagging Support</div>
+                <div class="card-body">
+                  <p>Try typing your own input and hit enter</p>
+                  <select id="select-tag" multiple="multiple" class="w-100">
+                    <option>red</option>
+                    <option selected="selected">green</option>
+                    <option>blue</option>
+                    <option>yellow</option>
+                    <option>magenta</option>
+                  </select>
+        
+                  <br><br>
+        
+                  <p>Try typing your own input followed by space</p>
+                  <select id="select-tag-token" multiple="multiple" class="w-100">
+                    <option>red</option>
+                    <option>green</option>
+                    <option>blue</option>
+                    <option selected="selected">yellow</option>
+                    <option>magenta</option>
+                  </select>
+                </div>
+              </div>
+              <!-- end tagging support -->
+            </div>
+            <div class="col-md-6">
+              <!-- placeholders -->
+              <div class="card">
+                <div class="card-header">Placeholders</div>
+                <div class="card-body">
+                  <p>With placeholder, single selection</p>
+                  <select id="select-placeholder-single" class="form-control w-100">
+                    <option></option>
+                    <optgroup label="Alaskan/Hawaiian Time Zone">
+                      <option value="AK">Alaska</option>
+                      <option value="HI">Hawaii</option>
+                    </optgroup>
+                    <optgroup label="Pacific Time Zone">
+                      <option value="CA">California</option>
+                      <option value="NV">Nevada</option>
+                      <option value="OR">Oregon</option>
+                      <option value="WA">Washington</option>
+                    </optgroup>
+                    <optgroup label="Mountain Time Zone">
+                      <option value="AZ">Arizona</option>
+                      <option value="CO">Colorado</option>
+                      <option value="ID">Idaho</option>
+                      <option value="MT">Montana</option>
+                    </optgroup>
+                    <optgroup label="Central Time Zone">
+                      <option value="AL">Alabama</option>
+                      <option value="AR">Arkansas</option>
+                      <option value="IL">Illinois</option>
+                      <option value="IA">Iowa</option>
+                    </optgroup>
+                    <optgroup label="Eastern Time Zone">
+                      <option value="CT">Connecticut</option>
+                      <option value="DE">Delaware</option>
+                      <option value="FL">Florida</option>
+                    </optgroup>
+                  </select>
+        
+                  <br><br>
+
+                  <p>With placeholder, multiple selection</p>
+                  <select id="select-placeholder-multiple" multiple="multiple" class="form-control w-100">
+                    <option></option>
+                    <optgroup label="Alaskan/Hawaiian Time Zone">
+                      <option value="AK">Alaska</option>
+                      <option value="HI">Hawaii</option>
+                    </optgroup>
+                    <optgroup label="Pacific Time Zone">
+                      <option value="CA">California</option>
+                      <option value="NV">Nevada</option>
+                      <option value="OR">Oregon</option>
+                      <option value="WA">Washington</option>
+                    </optgroup>
+                    <optgroup label="Mountain Time Zone">
+                      <option value="AZ">Arizona</option>
+                      <option value="CO">Colorado</option>
+                      <option value="ID">Idaho</option>
+                      <option value="MT">Montana</option>
+                    </optgroup>
+                    <optgroup label="Central Time Zone">
+                      <option value="AL">Alabama</option>
+                      <option value="AR">Arkansas</option>
+                      <option value="IL">Illinois</option>
+                      <option value="IA">Iowa</option>
+                    </optgroup>
+                    <optgroup label="Eastern Time Zone">
+                      <option value="CT">Connecticut</option>
+                      <option value="DE">Delaware</option>
+                      <option value="FL">Florida</option>
+                    </optgroup>
+                  </select>
+                </div>
+              </div>
+              <!-- end placeholders -->
+
+              <!-- disabled state -->
+              <div class="card">
+                <div class="card-header">Disabled State</div>
+                <div class="card-body">
+                  <select disabled="disabled" class="select-basic form-control w-100">
+                    <optgroup label="Alaskan/Hawaiian Time Zone">
+                      <option value="AK">Alaska</option>
+                      <option value="HI">Hawaii</option>
+                    </optgroup>
+                    <optgroup label="Pacific Time Zone">
+                      <option value="CA">California</option>
+                      <option value="NV">Nevada</option>
+                      <option value="OR">Oregon</option>
+                      <option value="WA">Washington</option>
+                    </optgroup>
+                    <optgroup label="Mountain Time Zone">
+                      <option value="AZ">Arizona</option>
+                      <option value="CO">Colorado</option>
+                      <option value="ID">Idaho</option>
+                      <option value="MT">Montana</option>
+                    </optgroup>
+                    <optgroup label="Central Time Zone">
+                      <option value="AL">Alabama</option>
+                      <option value="AR">Arkansas</option>
+                      <option value="IL">Illinois</option>
+                      <option value="IA">Iowa</option>
+                    </optgroup>
+                    <optgroup label="Eastern Time Zone">
+                      <option value="CT">Connecticut</option>
+                      <option value="DE">Delaware</option>
+                      <option value="FL">Florida</option>
+                    </optgroup>
+                  </select>
+        
+                  <br><br>
+        
+                  <select class="select-multiple-basic form-control w-100" disabled="disabled" multiple="multiple">
+                      <optgroup label="Alaskan/Hawaiian Time Zone">
+                        <option value="AK">Alaska</option>
+                        <option value="HI">Hawaii</option>
+                      </optgroup>
+                      <optgroup label="Pacific Time Zone">
+                        <option value="CA">California</option>
+                        <option value="NV">Nevada</option>
+                        <option value="OR">Oregon</option>
+                        <option value="WA">Washington</option>
+                      </optgroup>
+                      <optgroup label="Mountain Time Zone">
+                        <option value="AZ">Arizona</option>
+                        <option value="CO">Colorado</option>
+                        <option value="ID">Idaho</option>
+                        <option value="MT">Montana</option>
+                      </optgroup>
+                      <optgroup label="Central Time Zone">
+                        <option value="AL">Alabama</option>
+                        <option value="AR">Arkansas</option>
+                        <option value="IL">Illinois</option>
+                        <option value="IA">Iowa</option>
+                      </optgroup>
+                      <optgroup label="Eastern Time Zone">
+                        <option value="CT">Connecticut</option>
+                        <option value="DE">Delaware</option>
+                        <option value="FL">Florida</option>
+                      </optgroup>
+                  </select>
+        
+                  <br><br>
+        
+                  <p>Disabled option</p>
+                  <select class="select-basic form-control">
+                    <option value="one">First</option>
+                    <option value="two" disabled="disabled">Second (disabled)</option>
+                    <option value="three">Third</option>
+                  </select>
+                </div>
+              </div>
+              <!-- end disabled state -->
+            </div>
+          </div>
+          
+        </div>
+      </div>
+      <!-- END MAIN CONTENT -->
+
+      @@include('./partials/right-sidebar.html')
+
+    </div>
+    <!-- END MAIN -->
+
+    <div class="clearfix"></div>
+    
+    @@include('./partials/footer.html')
+
+  </div>
+  <!-- END WRAPPER -->
+
+  <!-- Vendor -->
+  <script src="assets/js/vendor.min.js"></script>
+
+  <!-- Select2 Plugin -->
+  <script src="assets/plugins/select2/select2.min.js"></script>
+
+  <!-- Select2 Init -->
+  <script src="assets/js/pages/forms-select2.init.js"></script>
+
+  <!-- App -->
+  <script src="assets/js/app.min.js"></script>
+</body>
+</html>
